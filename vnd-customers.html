@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="css/vnd-customers.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="logo">911Buyme</h2>
+            <span class="vendor-label">Vendor Panel</span>
+            <button id="sidebar-toggle" class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu-container">
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="vendor-dashboard.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-products.html">
+                        <i class="fas fa-box-open"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-orders.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                        <span class="badge">5 new</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-analytics.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-customers.html" class="active">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="menu-divider">Management</li>
+                <li>
+                    <a href="vnd-inventory.html">
+                        <i class="fas fa-warehouse"></i>
+                        <span>Inventory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-promotions.html">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Promotions</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-daily-deals.html">
+                        <i class="fas fa-tag"></i>
+                        <span>Daily Deals</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-qr-generator.html">
+                        <i class="fas fa-qrcode"></i>
+                        <span>QR Code</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-reviews.html">
+                        <i class="fas fa-star"></i>
+                        <span>Review</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-livestream.html">
+                        <i class="fas fa-video"></i>
+                        <span>Go Live</span>
+                    </a>                
+                </li>
+                <li>
+                    <a href="vnd-support.html">
+                        <i class="fas fa-life-ring"></i>
+                        <span>Support</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-verification.html" >
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verification</span>
+                    </a>
+                </li>
+                <li class="menu-divider">Account</li>
+                <li>
+                    <a href="vnd-payouts.html">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Payouts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="vnd-settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-footer">
+            <div class="profile-summary">
+                <img src="profile.jpg" alt="Profile" class="profile-img">
+                <div class="profile-info">
+                    <span class="username">John Doe</span>
+                    <span class="store-name">Premium Electronics</span>
+                </div>
+            </div>
+            <a href="logout.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+<main class="dashboard-content">
+    <header class="dashboard-header">
+        <div class="header-left">
+            <h1>Customer Management</h1>
+            <div class="breadcrumb">
+                <span>Dashboard</span>
+                <span>/</span>
+                <span class="current">Customers</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" id="searchCustomer" placeholder="Search customers...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <button class="primary-btn export-btn">
+                <i class="fas fa-file-export"></i> Export
+            </button>
+        </div>
+    </header>
+
+    <div class="table-container">
+        <div class="table-header">
+            <div class="table-actions">
+                <div class="table-count">
+                    Showing <span id="showingCount">1-10</span> of <span id="totalCount">24</span> customers
+                </div>
+                <div class="table-filters">
+                    <select id="filterStatus">
+                        <option value="all">All Customers</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="frequent">Frequent Buyers</option>
+                    </select>
+                    <select id="sortBy">
+                        <option value="recent">Most Recent</option>
+                        <option value="orders">Most Orders</option>
+                        <option value="name">Name (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="customer-col">Customer</th>
+                        <th>Contact</th>
+                        <th>Orders</th>
+                        <th>Total Spent</th>
+                        <th>Last Order</th>
+                        <th class="actions-col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customerTable">
+                    <tr>
+                        <td class="customer-cell">
+                            <div class="customer-avatar">
+                                <img src="https://i.pravatar.cc/150?img=1" alt="John Doe">
+                            </div>
+                            <div class="customer-info">
+                                <span class="customer-name">John Doe</span>
+                                <span class="customer-id">ID: CUST-1001</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="contact-info">
+                                <span class="customer-email">john.doe@example.com</span>
+                                <span class="customer-phone">+1 (555) 123-4567</span>
+                            </div>
+                        </td>
+                        <td class="order-count">12</td>
+                        <td class="total-spent">$1,245.00</td>
+                        <td class="last-order">May 15, 2023</td>
+                        <td class="actions-cell">
+                            <button class="action-btn view-btn" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn message-btn" title="Send Message">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="action-btn more-btn" title="More Options">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="customer-cell">
+                            <div class="customer-avatar">
+                                <img src="https://i.pravatar.cc/150?img=2" alt="Jane Smith">
+                            </div>
+                            <div class="customer-info">
+                                <span class="customer-name">Jane Smith</span>
+                                <span class="customer-id">ID: CUST-1002</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="contact-info">
+                                <span class="customer-email">jane.smith@example.com</span>
+                                <span class="customer-phone">+1 (555) 987-6543</span>
+                            </div>
+                        </td>
+                        <td class="order-count">8</td>
+                        <td class="total-spent">$876.50</td>
+                        <td class="last-order">May 10, 2023</td>
+                        <td class="actions-cell">
+                            <button class="action-btn view-btn" title="View Details">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn message-btn" title="Send Message">
+                                <i class="fas fa-envelope"></i>
+                            </button>
+                            <button class="action-btn more-btn" title="More Options">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-footer">
+            <div class="pagination">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Customer Modal -->
+<div id="viewModal" class="modal">
+    <div class="modal-content">
+        <span class="close close-view">&times;</span>
+        <div class="modal-header">
+            <div class="customer-avatar-lg">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Customer Avatar">
+            </div>
+            <h2>John Doe</h2>
+            <span class="customer-id">ID: CUST-1001</span>
+        </div>
+        
+        <div class="modal-body">
+            <div class="info-section">
+                <h3>Contact Information</h3>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">john.doe@example.com</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone:</span>
+                    <span class="info-value">+1 (555) 123-4567</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Location:</span>
+                    <span class="info-value">New York, USA</span>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>Order Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Total Orders</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">$1,245.00</span>
+                        <span class="stat-label">Total Spent</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">Avg. Rating</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>Recent Orders</h3>
+                <div class="recent-orders">
+                    <div class="order-item">
+                        <span class="order-id">#ORD-2023-1562</span>
+                        <span class="order-date">May 15, 2023</span>
+                        <span class="order-amount">$245.99</span>
+                        <span class="order-status shipped">Shipped</span>
+                    </div>
+                    <div class="order-item">
+                        <span class="order-id">#ORD-2023-1489</span>
+                        <span class="order-date">Apr 28, 2023</span>
+                        <span class="order-amount">$189.50</span>
+                        <span class="order-status delivered">Delivered</span>
+                    </div>
+                </div>
+                <a href="#" class="view-all-orders">View all orders →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Message Customer Modal -->
+<div id="messageModal" class="modal">
+    <div class="modal-content">
+        <span class="close close-message">&times;</span>
+        <div class="modal-header">
+            <div class="customer-avatar-lg">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Customer Avatar">
+            </div>
+            <h2>Message John Doe</h2>
+        </div>
+        
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="messageSubject">Subject</label>
+                <input type="text" id="messageSubject" placeholder="Enter message subject">
+            </div>
+            <div class="form-group">
+                <label for="messageText">Message</label>
+                <textarea id="messageText" rows="5" placeholder="Type your message here..."></textarea>
+            </div>
+            <div class="form-actions">
+                <button class="secondary-btn">Save Draft</button>
+                <button class="primary-btn">Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/vnd-customers.js"></script>
+    <script src="js/vnd-sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Email Verification | WorldMarkt</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/verify.css" />
+</head>
+<body>
+  <section id="verify-account" class="verify-section">
+    <div class="verify-container">
+      <div class="verify-card">
+        <div class="loader" id="loader"></div>
+        <h2 class="gradient-text">Verifying your account...</h2>
+        <p id="verify-status" class="sub-text">Please wait while we verify your email.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get("token");
+    const email = params.get("email");
+    const statusEl = document.getElementById("verify-status");
+    const loader = document.getElementById("loader");
+
+    if (!token || !email) {
+      statusEl.textContent = "❌ Invalid or missing verification link.";
+    } else {
+      fetch(`/api/users/auth/verify?token=${token}&email=${email}`)
+        .then((res) => res.json())
+        .then((data) => {
+            loader.style.display = "none";
+          if (data.success) {
+            statusEl.textContent = "✅ Email verified successfully! Redirecting to login...";
+            setTimeout(() => {
+              window.location.href = "/login.html";
+            }, 2500);
+          } else {
+            statusEl.textContent = "❌ " + (data.message || "Verification failed.");
+          }
+        })
+        .catch(() => {
+          statusEl.textContent = "❌ Something went wrong. Please try again later.";
+        });
+    }
+  </script>
+</body>
+</html>

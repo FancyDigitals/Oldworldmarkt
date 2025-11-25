@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldMarkt - Single Product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/single-product.css">
+    <link rel="stylesheet" href="css/deliver-to.css">
+    <link rel="stylesheet" href="css/stories.css">
+    <link rel="stylesheet" href="css/category-dropdown.css">
+    <link rel="stylesheet" href="css/daily-deals-story.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+       <script defer src="js/script.js"></script>
+       <script src="js/single-product.js"></script>
+       <script src="js/auth-status.js"></script>
+       <script src="js/cart-functions.js"></script>
+       <script src="js/deliver-to.js"></script>
+       <script src="js/category-dropdown.js"></script>
+       <script src="js/image-search.js"></script>
+       <script src="js/preference.js"></script>
+       <script src="js/daily-deals-story.js"></script>
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+<section>
+<header>
+    <div class="top-header">
+    <div class="logo">
+        <img src=worldmarkt-favicon.png alt="WORLDMARKT Logo">
+    </div>
+    <div class="categories-menu-wrapper">
+        <div class="categories-menu" id="categoriesToggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+          <span>Categories</span>
+        </div>
+      
+        <ul id="categoryDropdown" class="category-dropdown">
+          <li>
+            <a href="fashion.html">Fashion</a>
+            <ul class="subcategory">
+              <li><a href="categories/Fashion & Apparel/Accessories.html/">Accessories</a></li>
+              <li><a href="categories/Fashion & Apparel/Footwear.html/">Footwear</a></li>
+              <li><a href="categories/Fashion & Apparel/Men's clothing.html/">Men's Clothing</a></li>
+              <li><a href="categories/Fashion & Apparel/Women's Clothing.html/">Women's Clothing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Electronics</a>
+            <ul class="subcategory">
+              <li><a href="categories/Electronics/Cameras & Photography.html/">Camera & Photography</a></li>
+              <li><a href="categories/Electronics/Computers & Accessories.html/">Computers & Accessories</a></li>
+              <li><a href="categories/Electronics/Mobile Phones & Accessories.html/">Gaming & Consoles</a></li>
+              <li><a href="categories/Electronics/Wearable Tech.html/">wearabletech</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Beauty & Health</a>
+            <ul class="subcategory">
+                <li><a href="categories/Health & Beauty/Fitness & Supplements.html/">Fitness & Supplements</a></li>
+                <li><a href="categories/Health & Beauty/Haircare.html/">Haircare</a></li>
+                <li><a href="categories/Health & Beauty/Makeup.html/">Makeup</a></li>
+                <li><a href="categories/Health & Beauty/Skincare.html/">Skincare</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Home & Garden</a>
+            <ul class="subcategory">
+                <li><a href="categories/Home & Living/Furniture.html/">Furniture</a></li>
+                <li><a href="categories/Home & Living/Home Decor.html/">Home Decor</a></li>
+                <li><a href="categories/Home & Living/Kitchen & Dining.html/">Kitchen & Dining</a></li>
+                <li><a href="categories/Home & Living/Lighting & Fixtures.html/">Lighting & Fixtures</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Automotive</a>
+            <ul class="subcategory">
+                <li><a href="categories/Automotive.html/Parts.html/">Auto Parts</a></li>
+                <li><a href="categories/Automotive.html/Car Accessories.html/">Car Accessories</a></li>
+                <li><a href="categories/Automotive.html/Car Electronics.html/">Car Electronics</a></li>
+                <li><a href="categories/Automotive.html/Motorcycles & Bikes.html/">Motorcycles & Bikes</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Real Estate</a>
+            <ul class="subcategory">
+                <li><a href="categories/Real Estate/Apartments for rent.html/">Apartments For Rent</a></li>
+                <li><a href="categories/Real Estate/Commercial properties.html/">Commercial Properties</a></li>
+                <li><a href="categories/Real Estate/Houses for sale.html/">House For Sale</a></li>
+                <li><a href="categories/Real Estate/Land for sale.html/">Land For Sale</a></li>
+                <li><a href="categories/Real Estate/Vacation Rentals.html/">Vacation Rentals</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Food & Beverages</a>
+            <ul class="subcategory">
+                <li><a href="categories/Food & Beverages.html/Beverages.html/">Beverages</a></li>
+                <li><a href="categories/Food & Beverages.html/Groceries.html/">Groceries</a></li>
+                <li><a href="categories/Food & Beverages.html/Organic Food.html/">Organic Food</a></li>
+                <li><a href="categories/Food & Beverages.html/Snacks.html/">Snacks</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Digital Products</a>
+            <ul class="subcategory">
+                <li><a href="categories/Digital Products/Digital Art & Graphics.html/">Digital Art & Graphics</a></li>
+                <li><a href="categories/Digital Products/E-books.html/">E-books</a></li>
+                <li><a href="categories/Digital Products/Online Courses">Online Courses</a></li>
+                <li><a href="categories/Digital Products/Softwares & Apps.html/">Softwares & Apps</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Services</a>
+            <ul class="subcategory">
+                <li><a href="categories/Services/Event Planning.html/">Event Planning</a></li>
+                <li><a href="categories/Services/Freelance Services.html/">Freelance Services</a></li>
+                <li><a href="categories/Services/Home Services.html/">Home Services</a></li>
+                <li><a href="categories/Services/Legal Services.html/">Legal Services</a></li>
+                <li><a href="categories/Services/Photography & Videography.html/">Photography & Videography</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Baby & Kids</a>
+            <ul class="subcategory">
+                <li><a href="categories/Baby & Kids/Baby & Kids.html/">Baby & Kids</a></li>
+                <li><a href="categories/Baby & Kids/Diapers & Wipes.html/">Diapers & Wipes</a></li>
+                <li><a href="categories/Baby & Kids/Strollers & Car Seats.html/">Strollers & Car Seats</a></li>
+                <li><a href="categories/Baby & Kids/Toys & Games.html/">Toys & Games</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Sports & Outdoors</a>
+            <ul class="subcategory">
+                <li><a href="categories/Sports & Outdoors/Camping & Hiking.html/">Camping & Hiking</a></li>
+                <li><a href="categories/Sports & Outdoors/Cycling.html/">Cycling</a></li>
+                <li><a href="categories/Sports & Outdoors/Gym Equipment.html/">Gym Equipments</a></li>
+                <li><a href="categories/Sports & Outdoors/Water Sports.html/">Water Sports</a></li>
+            </ul>
+        </li>
+          <li><a href="#">More...</a></li>
+        </ul>
+      </div>
+      
+      
+    
+      <div class="search-form">
+        <div class="input-wrapper">
+          <input type="text" placeholder="Search for anything" id="searchInput">
+          <label for="imageUpload" class="image-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                  <radialGradient id="cameraLens" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#5f9ea0"/>
+                    <stop offset="100%" stop-color="#2c3e50"/>
+                  </radialGradient>
+                  <linearGradient id="cameraBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4b6cb7"/>
+                    <stop offset="100%" stop-color="#182848"/>
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="6" width="20" height="14" rx="2" ry="2" fill="url(#cameraBody)" />
+                <rect x="7" y="3" width="10" height="4" rx="1" ry="1" fill="#2c3e50" />
+                <circle cx="12" cy="13" r="5" fill="url(#cameraLens)" />
+                <circle cx="12" cy="13" r="2" fill="#ecf0f1" />
+                <circle cx="18" cy="9" r="1.2" fill="#bdc3c7" />
+              </svg>
+          </label>
+          <input type="file" id="imageUpload" accept="image/*" hidden onchange="imageSearch(this)">
+        </div>
+      
+        <button class="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+        </button>
+      </div>
+
+     <!--Image Result Modal-->
+     <div id="customModal" class="custom-modal">
+        <div class="custom-modal-content" id="modalContent">
+          <!-- Content will be injected by JS -->
+        </div>
+      </div>
+            
+      
+    
+      <!-- Preferences Button Trigger -->
+<div class="pref911-trigger">
+    <button id="pref911-open-modal" class="pref911-btn" aria-label="Open Preferences">
+      <!-- Globe Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#18375d" width="22" height="22">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+          10-4.48 10-10S17.52 2 12 2zm5.93 6h-2.02a8.9 8.9 0 0 0-1.42-2.79A7.958 7.958 0 0 1 17.93 8zM12 
+          4c1.23 1.52 2 3.78 2.09 6H9.91C10 7.78 10.77 5.52 12 4zM8.51 
+          5.21A8.9 8.9 0 0 0 7.09 8H5.07a7.958 7.958 0 0 1 3.44-2.79zM4.07 
+          10h2.2a10.8 10.8 0 0 0 0 4H4.07a7.982 7.982 0 0 1 0-4zm1 6h2.02a8.9 
+          8.9 0 0 0 1.42 2.79A7.958 7.958 0 0 1 5.07 16zm6.93 
+          4c-1.23-1.52-2-3.78-2.09-6h4.18c-.09 2.22-.86 4.48-2.09 
+          6zm3.49-1.21A8.9 8.9 0 0 0 16.91 16h2.02a7.958 7.958 0 0 1-3.44 
+          2.79zM17.73 14a10.8 10.8 0 0 0 0-4h2.2a7.982 7.982 0 0 1 0 4h-2.2z"/>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Preferences Modal -->
+  <div id="pref911-modal" class="pref911-modal">
+    <div class="pref911-modal-box">
+      <button class="pref911-close-btn" aria-label="Close Preferences">&times;</button>
+      <h2 class="pref911-modal-title">🌍 Set Your Preferences</h2>
+  
+      <div class="pref911-group">
+        <label for="pref911-lang">Language</label>
+        <select id="pref911-lang">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+  
+      <div class="pref911-group">
+        <label for="pref911-currency">Currency</label>
+        <select id="pref911-currency">
+          <option value="usd">USD ($)</option>
+          <option value="eur">EUR (€)</option>
+          <option value="gbp">GBP (£)</option>
+          <option value="ngn">NGN (₦)</option>
+        </select>
+      </div>
+  
+      <button class="pref911-save-btn">Save Preferences</button>
+    </div>
+  </div>
+  
+  
+      
+    <div class="cart">
+        <a href="cart.html" id="cartLink">
+            <img src="./assets/icons/cart.svg" width="50" height="50" alt="Cart Icon" class="cart-icon">
+            <span class="cart-count" id="cartCount">2</span>
+        </a>
+    </div>
+    
+        
+    <div class="top-header">
+        <!-- Other header content here -->
+        <div class="preferences">
+            <div class="deliver-to" id="deliverTo">
+                <span>Deliver to:</span>
+                <img src="flags/Nigeria.svg" alt="Nigerian Flag" class="flag-icon">
+                <span>NG</span>
+            </div>
+        </div>        
+    </div>        
+        
+
+        <div class="user-options">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+    </svg>Sign in/Register</button>
+        </div>
+    </div>
+</div>
+<div class="middle-header">
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+              </svg>Hot Deals</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+              </svg>What’s New</a></li>
+            <li><a href="#"><img src="trends-icon.png" alt="Trends">Trends</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
+                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
+                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
+                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
+              </svg>Earn with 911</a></li>
+        </ul>
+    </nav>
+    <div class="find-store-link">
+        <a href="store-locator.html" class="find-store-link">Find Store</a>
+    </div>
+</div>
+</header> 
+ <hr style="border: none; height: 4px; background: linear-gradient(to right, #18375D, #00AEEF); margin-bottom: 10px;">
+    
+<body>
+    <div class="breadcrumb-nav">
+        <ul class="breadcrumb-list">
+            <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">Home</a>
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">Electronics</a>
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">Appliances</a>
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+                <a href="#" class="breadcrumb-link">Washing Machines</a>
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item active">Reebok WL3-00105</li>
+        </ul>
+    </div>
+    
+    <header class="product-header">
+        <div class="header-gradient">
+            <div class="product-title-container">
+                <h1 class="product-title">
+                    <span class="product-brand">
+                        <span class="brand-decor">Reebok</span>
+                    </span>
+                    Washing Machine, Gray & Silver (WL3-00105)
+                </h1>
+                <div class="price-container">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">6,900</span>
+                    <span class="price-decimal">.00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-display">
+        <div class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image-wrapper">
+                    <img src="products/washing-machine.jpg" alt="Reebok Washing Machine WL3-00105" class="main-product-image">
+                    <span class="product-badge">BESTSELLER</span>
+                </div>
+                <div class="thumbnail-row">
+                    <div class="thumbnail-item active">
+                        <img src="products/washing-machine-thumb1.jpg" alt="Front View">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="products/washing-machine-thumb2.jpg" alt="Side View">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="products/washing-machine-thumb3.jpg" alt="Control Panel">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="products/washing-machine-thumb4.jpg" alt="Interior View">
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Product Details -->
+            <div class="product-details">
+                <div class="brand">
+                    <img src="path/to/brand-logo.png" alt="Brand Logo">
+                    <span>Brand Name</span>
+                </div>
+                <!-- Vendor Information -->
+                <div class="vendor-card">
+                    <div class="vendor-info">
+                        <img src="vendor/admin-store-logo.jpg" alt="Admin Store" class="vendor-logo">
+                        <div class="vendor-meta">
+                            <h3 class="vendor-name">Admin Store</h3>
+                            <div class="vendor-location">
+                                <span class="country-flag">🇺🇸</span>
+                                <span>United States</span>
+                            </div>
+                            <div class="vendor-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating">4.9 (128 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="vendor-story-btn" onclick="viewVendorStory()">
+                        <span class="story-icon">📖</span> Vendor Story
+                    </button>
+                </div>
+    
+                <!-- Product Information -->
+                <div class="product-info">
+                    
+                    <h1 class="product-title">Reebok Washing Machine, Gray & Silver (WL3-00105)</h1>
+                    <div class="product-meta">
+                        <span class="product-sku">SKU: MO1367</span>
+                        <span class="product-id">Product ID: WL3-00105</span>
+                        <span class="stock-status in-stock">In Stock</span>
+                    </div>
+                    
+                    <div class="price-section">
+                        <span class="current-price">$6,900.00</span>
+                        <span class="price-tax">+ applicable taxes</span>
+                    </div>
+    
+                    <div class="product-highlights">
+                        <ul class="highlight-list">
+                            <li>✔ 13kg large capacity drum</li>
+                            <li>✔ Energy efficient (A++ rating)</li>
+                            <li>✔ 3 customizable wash programs</li>
+                            <li>✔ Quick 30-minute wash cycle</li>
+                            <li>✔ Child lock safety feature</li>
+                        </ul>
+                    </div>
+    
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <span class="qty-label">Quantity:</span>
+                        <div class="qty-controls">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+    
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
+    
+                    <!-- Shipping Information -->
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <span class="shipping-icon">🚚</span>
+                            <div>
+                                <strong>Free Standard Shipping</strong>
+                                <p>3-5 business days</p>
+                            </div>
+                        </div>
+                        <div class="shipping-item">
+                            <span class="shipping-icon">↩️</span>
+                            <div>
+                                <strong>30-Day Returns</strong>
+                                <p>Free returns within 30 days</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- New Product Details Section -->
+    <div class="product-specifications">
+        <div class="specs-container">
+            <div class="technical-details">
+                <h2 class="section-title"><span>Technical Specifications</span></h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Capacity</span>
+                        <span class="spec-value">13 kg</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Energy Rating</span>
+                        <span class="spec-value">A+++</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Noise Level</span>
+                        <span class="spec-value">72 dB</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Dimensions</span>
+                        <span class="spec-value">85 x 60 x 55 cm</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="feature-highlights">
+                <h2 class="section-title"><span>Premium Features</span></h2>
+                <ul class="feature-list">
+                    <li>Stainless Steel Drum</li>
+                    <li>Smart Sensor Technology</li>
+                    <li>Steam Refresh Cycle</li>
+                    <li>Anti-Allergy Program</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Traditional HTML Code -->
+<section class="product-description-section">
+    <div class="description-container">
+        <!-- Short Description -->
+        <div class="short-description">
+            <h2 class="description-title">Product Overview</h2>
+            <div class="description-content">
+                <p>The <strong>Reebok WL3-00105</strong> washing machine combines cutting-edge technology with elegant design. Its gray and silver finish adds a touch of sophistication to any modern home, while delivering exceptional cleaning performance.</p>
+                <ul class="feature-points">
+                    <li>13kg large capacity drum for family-sized loads</li>
+                    <li>A+++ energy rating for maximum efficiency</li>
+                    <li>Ultra-quiet operation at just 47dB</li>
+                    <li>Smart connectivity via mobile app</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Long Description -->
+        <div class="long-description">
+            <h2 class="description-title">Detailed Specifications</h2>
+            <div class="description-content">
+                <h3>Advanced Cleaning Technology</h3>
+                <p>The WL3-00105 features Reebok's proprietary <strong>3D Wash System</strong> that uses multi-directional water jets to penetrate fabrics deeply. The stainless steel drum is designed with honeycomb patterning to gently care for your clothes while providing thorough cleaning.</p>
+                
+                <h3>Smart Features</h3>
+                <p>Connect to the <strong>Reebok Home App</strong> to:</p>
+                <ul>
+                    <li>Monitor cycle progress remotely</li>
+                    <li>Download specialized wash programs</li>
+                    <li>Receive maintenance alerts</li>
+                    <li>Track energy and water usage</li>
+                </ul>
+
+                <h3>Technical Specifications</h3>
+                <table class="specs-table">
+                    <tr>
+                        <th>Dimensions</th>
+                        <td>850 x 600 x 550 mm</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>72 kg</td>
+                    </tr>
+                    <tr>
+                        <th>Voltage</th>
+                        <td>220-240V, 50Hz</td>
+                    </tr>
+                    <tr>
+                        <th>Water Consumption</th>
+                        <td>10,000 liters/year</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="featured-products">
+    <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Discover our handpicked selection of premium items</p>
+        <div class="section-controls">
+            <button class="control-btn prev-btn">&#8249;</button>
+            <button class="control-btn next-btn">&#8250;</button>
+        </div>
+    </div>
+    
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-badge">Bestseller</div>
+            <div class="product-image">
+                <img src="images/product1.jpg" alt="Wireless Headphones">
+                <div class="quick-view">Quick View</div>
+            </div>
+            <div class="product-info">
+                <span class="product-category">Electronics</span>
+                <h3 class="product-title">Premium Wireless Headphones</h3>
+                <div class="product-rating">
+                    ★★★★☆ <span class="rating-count">(128)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$129.99</span>
+                    <span class="original-price">$159.99</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-badge">Sale</div>
+            <div class="product-image">
+                <img src="images/product2.jpg" alt="Smart Watch">
+                <div class="quick-view">Quick View</div>
+            </div>
+            <div class="product-info">
+                <span class="product-category">Wearables</span>
+                <h3 class="product-title">Smart Watch Series 5</h3>
+                <div class="product-rating">
+                    ★★★★★ <span class="rating-count">(256)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$199.99</span>
+                    <span class="original-price">$249.99</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-badge">New</div>
+            <div class="product-image">
+                <img src="images/product3.jpg" alt="Bluetooth Speaker">
+                <div class="quick-view">Quick View</div>
+            </div>
+            <div class="product-info">
+                <span class="product-category">Audio</span>
+                <h3 class="product-title">Portable Bluetooth Speaker</h3>
+                <div class="product-rating">
+                    ★★★★☆ <span class="rating-count">(84)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$89.99</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/product4.jpg" alt="Wireless Earbuds">
+                <div class="quick-view">Quick View</div>
+            </div>
+            <div class="product-info">
+                <span class="product-category">Electronics</span>
+                <h3 class="product-title">True Wireless Earbuds</h3>
+                <div class="product-rating">
+                    ★★★★☆ <span class="rating-count">(192)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price">$99.99</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section>
+            <footer>
+                <div class="footer">
+                    <!-- Footer Main Columns -->
+                    <div class="footer-column">
+                        <h3>Get to Know Us</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">News & Blog</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Customer Service</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="faqs.html">FAQ’s</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Payment Method</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Orders & Returns</h3>
+                        <ul>
+                            <li><a href="track-order.html">Track Order</a></li>
+                            <li><a href="#">Shipping & Delivery</a></li>
+                            <li><a href="#">Return & Exchange</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Shopping</h3>
+                        <ul>
+                            <li><a href="#">wishlist.html</a></li>
+                            <li><a href="#">Shop by Brand</a></li>
+                            <li><a href="#">Our Apps</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/911buyme/">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="https://twitter.com/911buyme">Twitter</a></li>
+                            <li><a href="#">TikTok</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- Middle Support Section -->
+                <div class="footer-support">
+                    <div class="support-item">
+                        <span class="icon">@</span>
+                        <p>Didn't find what you were looking for?<br><a href="#">Contact Us</a></p>
+                    </div>
+                    <div class="support-item">
+                        <span class="icon">⚓</span>
+                        <p>How can we help you today?<br><a href="#">Help Center</a></p>
+                    </div>
+                    <div class="support-item">
+                        <span class="icon">☺</span>
+                        <p>We’d love to hear what you think!<br><a href="#">Give Feedback</a></p>
+                    </div>
+                </div>
+            
+                <!-- Bottom Footer Section -->
+                <div class="footer-bottom">
+                    <p>Copyright © 2025 911Buyme, All rights reserved. <a href="#">Privacy Notice</a> <a href="#">Terms of Use</a></p>
+                    <div class="icons">
+                        <div class="accessibility-btn">☮</div>
+                        <div class="back-to-top">↑</div>
+                    </div>
+                </div>
+            </footer>    
+        </section>                
+       <!-- Deliver To Modal -->
+<div id="deliverToModal" class="deliver-modal">
+    <div class="deliver-modal__content">
+        <div class="deliver-modal__header">
+            <h2 class="deliver-modal__title">Specify Your Delivery Location</h2>
+            <span class="deliver-modal__close" id="closeDeliverTo">&times;</span>
+        </div>
+        
+        <div class="deliver-modal__body">
+            <p class="deliver-modal__notice">Shipping options and delivery fees vary based on your location. Please provide your address for accurate information.</p>
+            
+            <div class="deliver-modal__auth-section">
+                <button id="signInBtn" class="deliver-modal__auth-btn">
+                    <span class="icon">🔒</span>
+                    Sign in to use saved addresses
+                </button>
+                <p class="deliver-modal__divider">— or enter manually —</p>
+            </div>
+            
+            <div class="deliver-modal__form-group">
+                <label for="countrySelect" class="deliver-modal__label">Country/Region:</label>
+                <select id="countrySelect" class="deliver-modal__select">
+                    <option value="">Select Country</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="KE">Kenya</option>
+                </select>
+            </div>
+            
+            <div class="deliver-modal__form-group">
+                <label for="zipCode" class="deliver-modal__label">Postal/ZIP Code:</label>
+                <input type="text" id="zipCode" class="deliver-modal__input" placeholder="e.g. 100001 or NW1 6XE">
+            </div>
+        </div>
+        
+        <div class="deliver-modal__footer">
+            <button id="saveLocation" class="deliver-modal__save-btn">Save Delivery Location</button>
+            <p class="deliver-modal__disclaimer">Your location helps us provide accurate delivery times and fees.</p>
+        </div>
+    </div>
+</div>               
+
+</body>
+</html>

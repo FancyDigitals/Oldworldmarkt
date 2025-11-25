@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Ratings</title>
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-reviews.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">911Buyme</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-reviews.html" class="active">
+                    <i class="fas fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-livestream.html">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+                <a href="vnd-support.html">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li>
+              <a href="vnd-verification.html" >
+                  <i class="fas fa-check-circle"></i>
+                  <span>Verification</span>
+              </a>
+          </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+
+    <!-- Main Content -->
+<main class="reviews-content">
+    <div class="reviews-container">
+      <!-- Page Header -->
+      <header class="reviews-header">
+        <h1><i class="fas fa-star-half-alt"></i> Reviews & Ratings</h1>
+        <p>View and manage customer feedback for your store</p>
+      </header>
+  
+      <!-- Filter Options -->
+      <div class="filter-options">
+        <button class="filter-btn active" data-filter="all">All Reviews</button>
+        <button class="filter-btn" data-filter="positive">Positive (4-5★)</button>
+        <button class="filter-btn" data-filter="negative">Negative (1-2★)</button>
+        <button class="filter-btn" data-filter="neutral">Neutral (3★)</button>
+      </div>
+  
+      <!-- Reviews Table -->
+      <div class="table-responsive">
+        <table class="reviews-table">
+          <thead>
+            <tr>
+              <th class="customer-col">Customer</th>
+              <th class="rating-col">Rating</th>
+              <th class="review-col">Review</th>
+              <th class="date-col">Date</th>
+              <th class="action-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="review positive" data-rating="5" data-date="2023-05-15">
+              <td>John Doe</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td class="review-preview">Great product! Love the quality and fast shipping...</td>
+              <td>May 15, 2023</td>
+              <td>
+                <button class="btn-view" data-review-id="1">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-review-id="1">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+            <tr class="review negative" data-rating="1" data-date="2023-05-10">
+              <td>Jane Smith</td>
+              <td><span class="stars">★☆☆☆☆</span></td>
+              <td class="review-preview">Disappointed, arrived late and damaged...</td>
+              <td>May 10, 2023</td>
+              <td>
+                <button class="btn-view" data-review-id="2">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-review-id="2">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+            <tr class="review neutral" data-rating="3" data-date="2023-05-05">
+              <td>Michael Johnson</td>
+              <td><span class="stars">★★★☆☆</span></td>
+              <td class="review-preview">Pretty good, but could be improved...</td>
+              <td>May 5, 2023</td>
+              <td>
+                <button class="btn-view" data-review-id="3">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-review-id="3">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Review Modal -->
+  <div id="reviewModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2><i class="fas fa-star"></i> Review Details</h2>
+      
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Customer Name</label>
+          <input type="text" id="modalCustomerName" readonly>
+        </div>
+        
+        <div class="form-group">
+          <label>Rating</label>
+          <div id="modalRating" class="rating-display"></div>
+        </div>
+        
+        <div class="form-group">
+          <label>Date</label>
+          <input type="text" id="modalDate" readonly>
+        </div>
+        
+        <div class="form-group">
+          <label>Review</label>
+          <textarea id="modalReview" rows="5" readonly></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>Your Response</label>
+          <textarea id="vendorResponse" rows="3" placeholder="Type your response here..."></textarea>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-cancel">Cancel</button>
+        <button class="btn btn-submit">Submit Response</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/vnd-reviews.js"></script>
+</body>
+</html>

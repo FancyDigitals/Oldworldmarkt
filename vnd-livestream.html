@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Daily Deal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vendor-dashboard.css"/>
+  <link rel="stylesheet" href="css/vnd-sidebar.css">
+  <link rel="stylesheet" href="css/vnd-livestream.css"/>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">WorldMarkt</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-reviews.html">
+                    <i class="fas fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-livestream.html" class="active">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+                <a href="vnd-support.html">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-verification.html" >
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verification</span>
+                </a>
+            </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+
+    <div id="live-stream-container" class="container">
+        <!-- Stream Setup Form -->
+        <div id="stream-setup" class="stream-card setup-card">
+            <div class="card-header">
+                <h1><i class="fas fa-video"></i> Create Your Livestream</h1>
+                <p class="subheader">Connect with your audience in real-time</p>
+            </div>
+            
+            <form id="stream-setup-form" class="stream-form">
+                <div class="form-group">
+                    <label for="stream-title" class="required">Stream Title</label>
+                    <input type="text" id="stream-title" placeholder="e.g. Summer Collection Launch" required
+                           aria-describedby="title-help">
+                    <small id="title-help" class="help-text">Max 60 characters. Make it engaging!</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stream-description">Description</label>
+                    <textarea id="stream-description" 
+                              placeholder="What will you showcase today? (Products, special offers, etc.)"
+                              aria-describedby="desc-help"></textarea>
+                    <small id="desc-help" class="help-text">Optional but recommended</small>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="stream-category" class="required">Category</label>
+                        <select id="stream-category" required>
+                            <option value="">Select category</option>
+                            <option value="fashion">Fashion & Apparel</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="home">Home & Living</option>
+                            <option value="beauty">Beauty & Cosmetics</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="stream-privacy">Audience</label>
+                        <select id="stream-privacy">
+                            <option value="public">Public (All Followers)</option>
+                            <option value="private">Private (Invite Only)</option>
+                            <option value="vip">VIP Customers</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stream-thumbnail">Thumbnail Image</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="stream-thumbnail" accept="image/*" class="file-upload">
+                        <label for="stream-thumbnail" class="upload-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span class="upload-text">Choose thumbnail image</span>
+                        </label>
+                        <div id="thumbnail-preview" class="thumbnail-preview"></div>
+                    </div>
+                    <small class="help-text">Recommended: 1280x720px (16:9 ratio)</small>
+                </div>
+                
+                <div class="form-options">
+                    <label class="option-toggle">
+                        <input type="checkbox" id="stream-chat-enabled" checked>
+                        <span class="toggle-slider"></span>
+                        <span>Enable Live Chat</span>
+                    </label>
+                    
+                    <label class="option-toggle">
+                        <input type="checkbox" id="stream-notify-followers">
+                        <span class="toggle-slider"></span>
+                        <span>Notify Followers</span>
+                    </label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="setup-complete-btn" class="btn btn-primary btn-lg">
+                        <i class="fas fa-broadcast-tower"></i> Go Live
+                    </button>
+                    <button type="button" id="save-draft-btn" class="btn btn-secondary">
+                        <i class="fas fa-save"></i> Save Draft
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Active Stream View -->
+        <div id="active-stream-view" class="stream-active-view">
+            <div class="stream-header">
+                <div class="stream-title-wrapper">
+                    <h2 id="display-stream-title">Stream Title</h2>
+                    <div class="stream-meta">
+                        <span class="category-badge" id="display-stream-category">Fashion</span>
+                        <span class="viewer-badge" id="viewer-count-top">0</span>
+                    </div>
+                </div>
+                <div class="stream-stats">
+                    <span class="stat-item"><i class="fas fa-eye"></i> <span id="viewer-count">0</span></span>
+                    <span class="stat-item"><i class="fas fa-clock"></i> <span id="stream-duration">00:00:00</span></span>
+                    <span class="stat-item"><i class="fas fa-heart"></i> <span id="like-count">0</span></span>
+                </div>
+            </div>
+            
+            <div id="stream-wrapper" class="stream-video-wrapper">
+                <!-- Video Stream -->
+                <video id="live-stream-video" class="stream-video-element" autoplay playsinline></video>
+                
+                <!-- Stream Controls -->
+                <div class="stream-controls">
+                    <button id="toggle-camera-btn" class="control-btn" aria-label="Toggle camera">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button id="toggle-mic-btn" class="control-btn" aria-label="Toggle microphone">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button id="screen-share-btn" class="control-btn" aria-label="Share screen">
+                        <i class="fas fa-desktop"></i>
+                    </button>
+                    <button id="product-showcase-btn" class="control-btn" aria-label="Show product">
+                        <i class="fas fa-tag"></i>
+                    </button>
+                    <button id="end-stream-btn" class="control-btn control-btn-danger" aria-label="End stream">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                </div>
+                
+                <div id="moderation-status" class="moderation-alert" role="alert" aria-live="assertive">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Content flagged for review. Stream has been suspended.</span>
+                </div>
+                
+                <div id="stream-notifications" class="stream-notification-center"></div>
+            </div>
+
+            <div id="stream-details" class="stream-details-container">
+                <div class="stream-info">
+                    <div class="info-section">
+                        <h3><i class="fas fa-info-circle"></i> About This Stream</h3>
+                        <p id="display-stream-description">Stream description goes here</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-users"></i> Audience</h3>
+                        <div class="stream-meta">
+                            <span class="privacy-badge" id="display-stream-privacy">Public</span>
+                            <span class="viewer-count">• <span id="viewer-count-display">0</span> watching</span>
+                        </div>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3><i class="fas fa-box-open"></i> Featured Products</h3>
+                        <div id="featured-products" class="products-grid">
+                            <!-- Will be populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="live-chat-container" class="chat-container">
+                    <div class="chat-header">
+                        <h3><i class="fas fa-comments"></i> Live Chat</h3>
+                        <div class="chat-controls">
+                            <button id="chat-settings-btn" class="small-btn" aria-label="Chat settings">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                            <button id="clear-chat-btn" class="small-btn" aria-label="Clear chat">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button id="toggle-chat-btn" class="small-btn" aria-label="Toggle chat">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="chat-box" class="chat-message-box" tabindex="0">
+                        <div id="chat-messages" class="chat-messages"></div>
+                    </div>
+                    
+                    <form id="chat-form" class="chat-input-form">
+                        <div class="chat-input-wrapper">
+                            <input type="text" id="chat-message" placeholder="Type your message..." 
+                                   aria-label="Type your chat message" required />
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Showcase Modal -->
+    <div id="product-modal" class="modal" aria-hidden="true">
+        <!-- Modal content -->
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    <!-- ✅ Load Socket.IO client directly from your backend -->
+<script src="http://localhost:5000/socket.io/socket.io.js"></script>
+
+<!-- ✅ Then load your livestream logic -->
+<script src="js/vnd-livestream.js"></script>
+
+</body>
+</html>

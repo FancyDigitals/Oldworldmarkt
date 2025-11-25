@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Payouts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="css/vnd-payouts.css">
+</head>
+<body>
+<!-- Sidebar Navigation -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">911Buyme</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-reviews.html">
+                    <i class="fas fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-livestream.html">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+                <a href="vnd-support.html">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-verification.html" >
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verification</span>
+                </a>
+            </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html" class="active">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+    <main class="content">
+        <div class="page-header">
+            <h1><i class="fas fa-wallet"></i> Payout Dashboard</h1>
+            <div class="header-actions">
+                <button id="withdrawBtn" class="btn btn-primary">
+                    <i class="fas fa-money-bill-wave"></i> Request Payout
+                </button>
+            </div>
+        </div>
+
+        <!-- Balance Overview -->
+        <section class="payout-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Balance Overview</h2>
+            </div>
+            <div class="balance-cards">
+                <div class="card earnings-card">
+                    <div class="card-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Total Earnings</h3>
+                        <p class="amount" id="totalEarnings">$5,200.00</p>
+                    </div>
+                </div>
+                
+                <div class="card balance-card">
+                    <div class="card-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Available Balance</h3>
+                        <p class="amount" id="availableBalance">$2,500.00</p>
+                    </div>
+                </div>
+                
+                <div class="card pending-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pending Payouts</h3>
+                        <p class="amount" id="pendingPayouts">$800.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payout Methods -->
+        <section class="payout-section">
+            <div class="section-header">
+                <h2><i class="fas fa-credit-card"></i> Payout Methods</h2>
+            </div>
+            <div class="payout-methods">
+                <div class="method-card" data-method="bank">
+                    <div class="method-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank Transfer</h3>
+                    <p>2-3 business days</p>
+                </div>
+                
+                <div class="method-card" data-method="paypal">
+                    <div class="method-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3>PayPal</h3>
+                    <p>Instant transfer</p>
+                </div>
+                
+                <div class="method-card" data-method="crypto">
+                    <div class="method-icon">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <h3>Crypto (BTC/ETH)</h3>
+                    <p>Within 24 hours</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transaction History -->
+        <section class="payout-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Transaction History</h2>
+                <div class="history-filter">
+                    <select id="historyFilter">
+                        <option value="all">All Transactions</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Method</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Reference</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionHistory">
+                        <!-- Transactions will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Withdraw Modal -->
+    <div id="withdrawModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2><i class="fas fa-money-bill-wave"></i> Request Payout</h2>
+            
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" class="form-control">
+                    <option value="bank">Bank Transfer</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Crypto (BTC/ETH)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="payoutAmount">Amount (USD)</label>
+                <div class="amount-input">
+                    <span>$</span>
+                    <input type="number" id="payoutAmount" class="form-control" min="10" step="0.01" max="2500">
+                </div>
+                <small class="help-text">Minimum payout: $10.00</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="payoutDetails" id="detailsLabel">Bank Account Details</label>
+                <textarea id="payoutDetails" class="form-control" rows="4" 
+                          placeholder="Enter your bank account details (Account number, Routing number, etc.)"></textarea>
+            </div>
+            
+            <div class="modal-actions">
+                <button id="cancelPayout" class="btn btn-secondary">Cancel</button>
+                <button id="confirmPayout" class="btn btn-primary">Confirm Payout</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal Handling
+        const modal = document.getElementById("withdrawModal");
+        const withdrawBtn = document.getElementById("withdrawBtn");
+        const closeModal = document.querySelector(".close-modal");
+        const confirmPayout = document.getElementById("confirmPayout");
+
+        // Open modal
+        withdrawBtn.onclick = () => {
+            modal.style.display = "flex";
+        };
+
+        // Close modal when clicking the close button
+        closeModal.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        // Close modal when clicking outside the modal content
+        window.onclick = (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Confirm payout (just a simple alert for now)
+        confirmPayout.onclick = () => {
+            let amount = document.getElementById("payoutAmount").value;
+            if (amount < 10 || amount > 2500) {
+                alert("Enter an amount between $10 and $2500.");
+            } else {
+                alert(`Payout request of $${amount} submitted successfully!`);
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+    <script src="js/vendor-dashboard.js"></script>
+</body>
+</html>

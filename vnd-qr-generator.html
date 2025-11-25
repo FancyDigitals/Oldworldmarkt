@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="css/vnd-qr-generator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="js/qrcode.min.js"></script>
+    <script defer src="js/vnd-qr-generator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">911Buyme</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html" class="active">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+              <a href="vnd-reviews.html">
+                  <i class="fas fa-star"></i>
+                  <span>Review</span>
+              </a>
+          </li>
+            <li>
+                <a href="vnd-livestream.html">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+              <a href="vnd-support.html">
+                  <i class="fas fa-life-ring"></i>
+                  <span>Support</span>
+              </a>
+          </li>
+          <li>
+            <a href="vnd-verification.html" >
+                <i class="fas fa-check-circle"></i>
+                <span>Verification</span>
+            </a>
+        </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+
+  <!-- Main Content Area -->
+<main class="qr-generator-content">
+  <div class="qr-generator-container">
+    <!-- Page Header -->
+    <header class="qr-generator-header">
+      <h1><i class="fas fa-qrcode"></i> QR Code Generator</h1>
+      <p>Generate scannable QR codes for your products</p>
+    </header>
+
+    <!-- Generator Form -->
+    <form class="qr-form" id="qrForm">
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <div class="input-with-icon">
+          <i class="fas fa-tag"></i>
+          <input type="text" id="productName" placeholder="e.g. Premium Wireless Headphones" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="productLink">Product URL</label>
+        <div class="input-with-icon">
+          <i class="fas fa-link"></i>
+          <input type="url" id="productLink" placeholder="https://example.com/product" required />
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-generate">
+          <i class="fas fa-qrcode"></i> Generate QR Code
+        </button>
+      </div>
+    </form>
+
+    <!-- Results Section (Initially Hidden) -->
+    <div class="qr-result" id="qrResult" style="display: none;">
+      <div class="result-header">
+        <h2><i class="fas fa-check-circle"></i> Your QR Code is Ready!</h2>
+        <p>Scan this code to view your product</p>
+      </div>
+
+      <div class="qr-code-container">
+        <div class="qr-code-wrapper">
+          <canvas id="qrCanvas" class="qr-canvas"></canvas>
+          <div class="qr-code-overlay">
+            <div class="product-info">
+              <span id="displayProductName"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="download-options">
+        <button id="downloadBtn" class="btn btn-download">
+          <i class="fas fa-download"></i> Download PNG
+        </button>
+        <button id="copyBtn" class="btn btn-copy">
+          <i class="fas fa-copy"></i> Copy to Clipboard
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

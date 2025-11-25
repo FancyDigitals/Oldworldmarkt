@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-inventory.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">911Buyme</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html" class="active">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-reviews.html">
+                    <i class="fas fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-livestream.html">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+                <a href="vnd-support.html">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-verification.html">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verification</span>
+                </a>
+            </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+
+<main class="inventory-content">
+    <div class="inventory-container">
+      <!-- Page Header -->
+      <header class="inventory-header">
+        <h1><i class="fas fa-boxes"></i> Inventory Management</h1>
+        <p>Track and manage your product inventory</p>
+      </header>
+  
+      <!-- Inventory Controls -->
+      <div class="inventory-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="inventorySearch" placeholder="Search products...">
+        </div>
+        <button class="btn btn-primary" id="addProductBtn">
+          <i class="fas fa-plus"></i> Add Product
+        </button>
+      </div>
+  
+      <!-- Inventory Table -->
+      <div class="table-responsive">
+        <table class="inventory-table">
+          <thead>
+            <tr>
+              <th class="product-col">Product</th>
+              <th class="stock-col">Stock</th>
+              <th class="status-col">Status</th>
+              <th class="action-col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTableBody">
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="page-btn" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+        <span id="pageInfo">Page 1 of 1</span>
+        <button class="page-btn" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  
+    <!-- Update Stock Modal -->
+    <div id="updateStockModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2><i class="fas fa-edit"></i> Update Stock</h2>
+        
+        <div class="form-group">
+          <label for="productName">Product</label>
+          <input type="text" id="productName" class="form-control" readonly>
+        </div>
+  
+        <div class="form-group">
+          <label for="newStockQuantity">New Stock Quantity</label>
+          <input type="number" id="newStockQuantity" class="form-control" min="0" step="1">
+        </div>
+  
+        <div class="modal-actions">
+          <button class="btn btn-secondary" id="cancelUpdateBtn">Cancel</button>
+          <button class="btn btn-primary" id="confirmUpdateBtn">Update Stock</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2><i class="fas fa-plus-circle"></i> Add New Product</h2>
+        
+        <div class="form-group">
+          <label for="newProductName">Product Name</label>
+          <input type="text" id="newProductName" class="form-control" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="initialStock">Initial Stock Quantity</label>
+          <input type="number" id="initialStock" class="form-control" min="0" step="1" value="0">
+        </div>
+  
+        <div class="modal-actions">
+          <button class="btn btn-secondary" id="cancelAddBtn">Cancel</button>
+          <button class="btn btn-primary" id="confirmAddBtn">Add Product</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <script src="js/vnd-inventory.js"></script>
+    <script src="js/vnd-sidebar.js"></script>
+</body>
+</html>

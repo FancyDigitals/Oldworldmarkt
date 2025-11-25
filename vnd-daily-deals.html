@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Daily Deal | Vendor Stories</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="css/vendor-dashboard.css" />
+  <link rel="stylesheet" href="css/vnd-sidebar.css">
+  <link rel="stylesheet" href="css/vnd-daily-deals.css" />
+</head>
+
+<body>
+  <!-- ===== Sidebar Navigation ===== -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 class="logo">WORLDMARKT</h2>
+      <span class="vendor-label">Vendor Panel</span>
+      <button id="sidebar-toggle" class="toggle-btn"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <div class="sidebar-menu-container">
+      <ul class="sidebar-menu">
+        <li><a href="vendor-dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+        <li><a href="vnd-products.html"><i class="fas fa-box-open"></i><span>Products</span></a></li>
+        <li><a href="vnd-orders.html"><i class="fas fa-shopping-cart"></i><span>Orders</span><span class="badge">5 new</span></a></li>
+        <li><a href="vnd-analytics.html"><i class="fas fa-chart-line"></i><span>Analytics</span></a></li>
+        <li><a href="vnd-customers.html"><i class="fas fa-users"></i><span>Customers</span></a></li>
+
+        <li class="menu-divider">Management</li>
+        <li><a href="vnd-inventory.html"><i class="fas fa-warehouse"></i><span>Inventory</span></a></li>
+        <li><a href="vnd-promotions.html"><i class="fas fa-bullhorn"></i><span>Promotions</span></a></li>
+        <li><a href="vnd-daily-deals.html" class="active"><i class="fas fa-tag"></i><span>Daily Deals</span></a></li>
+        <li><a href="vnd-qr-generator.html"><i class="fas fa-qrcode"></i><span>QR Code</span></a></li>
+        <li><a href="vnd-reviews.html"><i class="fas fa-star"></i><span>Review</span></a></li>
+        <li><a href="vnd-livestream.html"><i class="fas fa-video"></i><span>Go Live</span></a></li>
+        <li><a href="vnd-support.html"><i class="fas fa-life-ring"></i><span>Support</span></a></li>
+        <li><a href="vnd-verification.html"><i class="fas fa-check-circle"></i><span>Verification</span></a></li>
+
+        <li class="menu-divider">Account</li>
+        <li><a href="vnd-payouts.html"><i class="fas fa-money-bill-wave"></i><span>Payouts</span></a></li>
+        <li><a href="vnd-settings.html"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="profile-summary">
+        <img src="profile.jpg" alt="Profile Image" class="profile-img">
+        <div class="profile-info">
+          <span class="username">John Doe</span>
+          <span class="store-name">Premium Electronics</span>
+        </div>
+      </div>
+      <a href="logout.html" class="logout-btn"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+  </aside>
+
+  <!-- ===== Main Section ===== -->
+  <main class="content">
+    <div class="header-container">
+      <h1>Your Deal Stories</h1>
+      <button id="create-story-btn" class="primary-btn">
+        <i class="fas fa-plus"></i> Create Story
+      </button>
+    </div>
+
+    <div class="stories-container" id="stories-container">
+      <!-- Active Stories -->
+      <section class="active-stories">
+        <h2>Active Stories</h2>
+        <div class="stories-grid" id="active-stories-grid"></div>
+      </section>
+
+      <!-- Past Stories -->
+      <section class="past-stories">
+        <h2>Past Stories</h2>
+        <div class="stories-grid" id="past-stories-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ===== Story Modal ===== -->
+  <div id="story-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Create Deal Story</h2>
+        <button class="close-btn" id="close-modal-btn"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="story-creator">
+        <!-- Preview Section -->
+        <div class="story-preview-container">
+          <div class="story-preview" id="story-preview">
+            <img id="story-image-preview" class="hidden" alt="Story Preview Image">
+            
+            <div id="upload-prompt" class="upload-prompt">
+              <i class="fas fa-image"></i>
+              <p>Upload your deal image</p>
+              <small>Recommended: 1080x1920px</small>
+            </div>
+
+            <div class="story-overlay">
+              <h3 id="story-title-preview">Deal Title</h3>
+              <p id="story-price-preview">₦0</p>
+              <button id="story-cta-preview">Shop Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <form id="story-form" class="story-form">
+          <div class="form-group">
+            <label for="story-title">Deal Title*</label>
+            <input type="text" id="story-title" placeholder="e.g. 50% Off Summer Collection" required maxlength="50">
+            <div class="character-count"><span id="title-count">0</span>/50</div>
+          </div>
+
+          <div class="form-group">
+            <label for="story-description">Deal Description</label>
+            <textarea id="story-description" placeholder="Describe your deal (optional)" rows="3"></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="story-price">Deal Price*</label>
+              <div class="price-input">
+                <span class="currency">₦</span>
+                <input type="number" id="story-price" placeholder="5000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="original-price">Original Price</label>
+              <div class="price-input">
+                <span class="currency">₦</span>
+                <input type="number" id="original-price" placeholder="10000">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="story-duration">Duration*</label>
+              <select id="story-duration" required>
+                <option value="6">6 hours</option>
+                <option value="12">12 hours</option>
+                <option value="24" selected>24 hours</option>
+                <option value="48">48 hours</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="story-cta">Button Text*</label>
+              <input type="text" id="story-cta" placeholder="e.g. Shop Now" value="Shop Now" required>
+            </div>
+          </div>
+
+          <div class="form-group file-upload">
+            <label for="story-image">Upload Image*</label>
+            <div class="upload-container">
+              <input type="file" id="story-image" accept="image/*" required>
+              <label for="story-image" class="upload-btn">
+                <i class="fas fa-cloud-upload-alt"></i> Choose Image
+              </label>
+              <span id="file-name" class="file-name">No file selected</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="preview-story-btn" class="secondary-btn">
+              <i class="fas fa-eye"></i> Preview
+            </button>
+            <button type="submit" id="publish-story-btn" class="primary-btn">
+              <i class="fas fa-paper-plane"></i> Publish Story
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== JS Scripts ===== -->
+  <script src="js/vnd-daily-deals.js"></script>
+  <script src="js/vnd-sidebar.js"></script>
+</body>
+</html>

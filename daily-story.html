@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldMarkt Stories</title>
+    <link rel="stylesheet" href="css/daily-stories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="story-app">
+        <!-- Header with progress bars -->
+        <div class="story-header">
+            <a href="index.html" class="back-button" aria-label="Go back">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <div class="progress-container" id="progressContainer" role="progressbar" aria-valuetext="Story progress"></div>
+        </div>
+
+        <!-- Main story display area -->
+        <div class="story-viewport" id="storyViewport">
+            <img class="story-media" id="storyImage" alt="Story content" loading="lazy">
+            <video class="story-media" id="storyVideo" playsinline aria-label="Story video"></video>
+            <div class="story-text" id="storyText" aria-live="polite"></div>
+
+            <!-- Vendor info overlay -->
+            <div class="vendor-overlay">
+                <img class="vendor-logo" id="vendorLogo" alt="Vendor logo">
+                <span class="daily-story-vendor-name" id="vendorName"></span>
+                <a href="#" class="buy-now-btn" id="buyNowBtn">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="nav-arrow prev-arrow" id="prevArrow" aria-label="Previous story">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrow next-arrow" id="nextArrow" aria-label="Next story">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Category switcher -->
+        <div class="category-switcher">
+            <select id="categorySelect" aria-label="Select story category">
+                <option value="daily-deals">Daily Deals</option>
+                <option value="15-off">15% Off</option>
+                <option value="25-off">25% Off</option>
+                <option value="innovation">Innovation</option>
+                <option value="brands">Brands</option>
+                <option value="auctions">Auctions</option>
+                <option value="black-friday">Black Friday</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="js/daily-stories.js" defer></script>
+</body>
+</html>

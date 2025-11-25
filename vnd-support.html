@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Support</title>
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+    <link rel="stylesheet" href="css/vnd-support.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="logo">911Buyme</h2>
+        <span class="vendor-label">Vendor Panel</span>
+        <button id="sidebar-toggle" class="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-menu-container">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="vendor-dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-products.html">
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-orders.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                    <span class="badge">5 new</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-analytics.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-customers.html">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li class="menu-divider">Management</li>
+            <li>
+                <a href="vnd-inventory.html">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-promotions.html">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Promotions</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-daily-deals.html">
+                    <i class="fas fa-tag"></i>
+                    <span>Daily Deals</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-qr-generator.html">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-reviews.html">
+                    <i class="fas fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-livestream.html">
+                    <i class="fas fa-video"></i>
+                    <span>Go Live</span>
+                </a>                
+            </li>
+            <li>
+                <a href="vnd-support.html" class="active">
+                    <i class="fas fa-life-ring"></i>
+                    <span>Support</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-verification.html" >
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verification</span>
+                </a>
+            </li>
+            <li class="menu-divider">Account</li>
+            <li>
+                <a href="vnd-payouts.html">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Payouts</span>
+                </a>
+            </li>
+            <li>
+                <a href="vnd-settings.html">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="sidebar-footer">
+        <div class="profile-summary">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <div class="profile-info">
+                <span class="username">John Doe</span>
+                <span class="store-name">Premium Electronics</span>
+            </div>
+        </div>
+        <a href="logout.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+    </div>
+</aside>
+<main class="support-content">
+    <div class="support-container">
+      <!-- Page Header -->
+      <header class="support-header">
+        <h1><i class="fas fa-headset"></i> Support Tickets</h1>
+        <p>Manage and respond to customer support requests</p>
+      </header>
+  
+      <!-- Support Table -->
+      <div class="table-responsive">
+        <table class="support-table">
+          <thead>
+            <tr>
+              <th class="ticket-id">Ticket ID</th>
+              <th class="customer">Customer</th>
+              <th class="subject">Subject</th>
+              <th class="status">Status</th>
+              <th class="date">Date</th>
+              <th class="actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ticket-id="1001">
+              <td>#1001</td>
+              <td>John Doe</td>
+              <td>Order Delay</td>
+              <td><span class="status-badge open">Open</span></td>
+              <td>March 25, 2025</td>
+              <td>
+                <button class="btn-view" data-ticket-id="1001">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-ticket-id="1001">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+            <tr data-ticket-id="1002">
+              <td>#1002</td>
+              <td>Jane Smith</td>
+              <td>Payment Issue</td>
+              <td><span class="status-badge in-progress">In Progress</span></td>
+              <td>March 24, 2025</td>
+              <td>
+                <button class="btn-view" data-ticket-id="1002">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-ticket-id="1002">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+            <tr data-ticket-id="1003">
+              <td>#1003</td>
+              <td>Mark Johnson</td>
+              <td>Product Not Delivered</td>
+              <td><span class="status-badge resolved">Resolved</span></td>
+              <td>March 23, 2025</td>
+              <td>
+                <button class="btn-view" data-ticket-id="1003">
+                  <i class="fas fa-eye"></i> View
+                </button>
+                <button class="btn-reply" data-ticket-id="1003">
+                  <i class="fas fa-reply"></i> Reply
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <!-- View Ticket Modal -->
+      <div id="viewModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2><i class="fas fa-ticket-alt"></i> Ticket Details</h2>
+          <div class="ticket-details">
+            <div class="detail-row">
+              <span class="detail-label">Ticket ID:</span>
+              <span id="viewTicketId" class="detail-value"></span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Customer:</span>
+              <span id="viewCustomer" class="detail-value"></span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Date:</span>
+              <span id="viewDate" class="detail-value"></span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Status:</span>
+              <span id="viewStatus" class="detail-value"></span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Subject:</span>
+              <span id="viewSubject" class="detail-value"></span>
+            </div>
+            <div class="detail-row full-width">
+              <span class="detail-label">Message:</span>
+              <div id="viewMessage" class="detail-message"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Reply Ticket Modal -->
+      <div id="replyModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2><i class="fas fa-reply"></i> Reply to Ticket</h2>
+          <div class="form-group">
+            <label for="replyMessage">Your Response</label>
+            <textarea id="replyMessage" rows="5" placeholder="Type your response here..."></textarea>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-submit">Submit Response</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/vnd-support.js"></script>
+</body>
+</html>

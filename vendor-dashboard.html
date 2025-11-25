@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard | WorldMarkt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-sidebar.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="logo">WORLDMARKT</h2>
+                <span class="vendor-label">Vendor Panel</span>
+                <button id="sidebar-toggle" class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-menu-container">
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="vendor-dashboard.html" class="active">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-products.html">
+                            <i class="fas fa-box-open"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-orders.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                            <span class="badge">5 new</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-analytics.html">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-customers.html">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li class="menu-divider">Management</li>
+                    <li>
+                        <a href="vnd-inventory.html">
+                            <i class="fas fa-warehouse"></i>
+                            <span>Inventory</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-promotions.html">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Promotions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-daily-deals.html">
+                            <i class="fas fa-tag"></i>
+                            <span>Daily Deals</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-qr-generator.html">
+                            <i class="fas fa-qrcode"></i>
+                            <span>QR Code</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-livestream.html">
+                            <i class="fas fa-video"></i>
+                            <span>Go Live</span>
+                        </a>                
+                    </li>
+                    <li>
+                        <a href="vnd-support.html">
+                            <i class="fas fa-life-ring"></i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-verification.html" >
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verification</span>
+                        </a>
+                    </li>
+                    <li class="menu-divider">Account</li>
+                    <li>
+                        <a href="vnd-payouts.html">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Payouts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="vnd-settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="profile-summary">
+                    <img src="profile.jpg" alt="Profile" class="profile-img">
+                    <div class="profile-info">
+                        <span class="username">John Doe</span>
+                        <span class="store-name">Premium Electronics</span>
+                    </div>
+                </div>
+                <a href="logout.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-content">
+            <!-- Top Navigation Bar -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                    <div class="breadcrumb">
+                        <span>Home</span>
+                        <span>/</span>
+                        <span class="current">Dashboard</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                    </div>
+                    
+                    <div class="profile-dropdown">
+                        <div class="profile-toggle">
+                            <img src="profile.jpg" alt="Profile">
+                            <span>John Doe</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fas fa-user"></i> My Profile</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fas fa-question-circle"></i> Help</a></li>
+                            <li><a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Summary Cards -->
+            <section class="dashboard-summary">
+                <div class="summary-card revenue">
+                    <div class="card-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Total Revenue</span>
+                        <span class="card-value">$12,450</span>
+                        <span class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 12% from last month
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="summary-card orders">
+                    <div class="card-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Total Orders</span>
+                        <span class="card-value">156</span>
+                        <span class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 8% from last month
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="summary-card products">
+                    <div class="card-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Active Products</span>
+                        <span class="card-value">42</span>
+                        <span class="card-change negative">
+                            <i class="fas fa-arrow-down"></i> 2 from last month
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="summary-card customers">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">New Customers</span>
+                        <span class="card-value">28</span>
+                        <span class="card-change positive">
+                            <i class="fas fa-arrow-up"></i> 15% from last month
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Orders and Statistics -->
+            <section class="dashboard-main-content">
+                <div class="recent-orders">
+                    <div class="section-header">
+                        <h2>Recent Orders</h2>
+                        <a href="vnd-orders.html" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-2023-1562</td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <img src="customer1.jpg" alt="Customer">
+                                            <span>John Smith</span>
+                                        </div>
+                                    </td>
+                                    <td>May 15, 2023</td>
+                                    <td><span class="status-badge shipped">Shipped</span></td>
+                                    <td>$245.99</td>
+                                    <td>
+                                        <button class="action-btn view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-2023-1561</td>
+                                    <td>
+                                        <div class="customer-cell">
+                                            <img src="customer2.jpg" alt="Customer">
+                                            <span>Sarah Johnson</span>
+                                        </div>
+                                    </td>
+                                    <td>May 14, 2023</td>
+                                    <td><span class="status-badge processing">Processing</span></td>
+                                    <td>$189.50</td>
+                                    <td>
+                                        <button class="action-btn view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stats-card">
+                        <h3>Sales Overview</h3>
+                        <div class="chart-placeholder">
+                            <!-- Chart would go here -->
+                            <img src="sales-chart.png" alt="Sales Chart">
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <h3>Top Products</h3>
+                        <ul class="top-products-list">
+                            <li>
+                                <span class="product-rank">1</span>
+                                <span class="product-name">Wireless Earbuds Pro</span>
+                                <span class="product-sales">42 sales</span>
+                            </li>
+                            <li>
+                                <span class="product-rank">2</span>
+                                <span class="product-name">Smart Watch X3</span>
+                                <span class="product-sales">35 sales</span>
+                            </li>
+                            <li>
+                                <span class="product-rank">3</span>
+                                <span class="product-name">Bluetooth Speaker</span>
+                                <span class="product-sales">28 sales</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/vendor-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Messages</title>
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vendor-dashboard.css">
+    <link rel="stylesheet" href="css/vnd-inventory.css">
+</head>
+<body>
+    <!-- ✅ Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <h2>Vendor Panel</h2>
+        <ul class="sidebar-menu">
+            <li><a href="vendor-dashboard.html">Dashboard</a></li>
+            <li><a href="vnd-products.html">Products</a></li>
+            <li><a href="vnd-orders.html">Orders</a></li>
+            <li><a href="vnd-analytics.html">Analytics</a></li>
+            <li><a href="vnd-customers.html">Customers</a></li>
+            <li><a href="vnd-support.html">Support</a></li>
+            <li><a href="vnd-settings.html">Settings</a></li>
+            <li><a href="vnd-payouts.html">Payouts</a></li>
+            <li><a href="vnd-daily-deals.html">Post A Deal</a></li>
+            <li><a href="vnd-reviews.html">Reviews & Ratings</a></li>
+            <li><a href="vnd-verification.html">Verification</a></li>
+            <li><a href="vnd-promotions.html">Promotions & Ads</a></li>
+            <li><a href="vnd-inventory.html">Inventory Management</a></li>
+            <li><a href="vnd-messages.html" class="active">Messages</a></li>
+        </ul>
+    </aside>
+
+    <!-- ✅ Main Content -->
+    <main class="content">
+        <div class="campaign-overview">
+            <h1>Messages</h1>
+            <button class="btn-primary" id="composeMessage">Compose Message</button>
+        </div>
+
+        <!-- ✅ Tabs for Inbox & Sent -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="inbox" aria-selected="true">📥 Inbox</button>
+            <button class="tab-btn" data-tab="sent" aria-selected="false">📤 Sent</button>
+        </div>        
+
+        <!-- ✅ Inbox Messages -->
+        <section id="inbox" class="tab-content active">
+            <table class="ad-table">
+                <thead>
+                    <tr>
+                        <th>Sender</th>
+                        <th>Message</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Hello, I have a question...</td>
+                        <td><button class="btn-primary view-btn">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ✅ Sent Messages -->
+        <section id="sent" class="tab-content">
+            <table class="ad-table">
+                <thead>
+                    <tr>
+                        <th>Recipient</th>
+                        <th>Message</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="sentMessagesTable">
+                    <!-- Sent messages will be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ✅ Performance Metrics -->
+        <div class="performance-metrics">
+            <div class="metric-box">
+                <h3>Inbox</h3>
+                <p>5 Messages</p>
+            </div>
+            <div class="metric-box">
+                <h3>Sent</h3>
+                <p>3 Messages</p>
+            </div>
+            <div class="metric-box">
+                <h3>Unread</h3>
+                <p>2 Messages</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ✅ Message View Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Message</h2>
+            <input type="text" id="msgSender" readonly>
+            <textarea id="msgContent" readonly></textarea>
+            <button class="btn-primary" id="replyBtn">Reply</button>
+        </div>
+    </div>
+
+    <!-- ✅ Reply Modal -->
+    <div id="replyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reply</h2>
+            <textarea id="replyMessage" placeholder="Type your reply..."></textarea>
+            <button class="btn-primary" id="sendReply">Send</button>
+        </div>
+    </div>
+
+    <script src="js/vnd-meessages.js"></script>
+</body>
+</html>

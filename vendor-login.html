@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Login | WORLDMARKT</title>
+  <meta name="description" content="Login to your WORLDMARKT vendor account">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" type="image/png" href="worldmarkt-favicon.png">
+</head>
+<body>
+  <div class="login-container">
+    <!-- Branding Section -->
+    <div class="branding-section">
+      <div class="logo">
+        <div class="logo-icon">
+          <img src="worldmarkt-favicon.png" alt="WORLDMARKT Logo" />
+        </div>
+        <h1>WORLDMARKT</h1>
+      </div>
+      <h2>Welcome Back Vendor</h2>
+      <p class="tagline">Login to manage your store and products</p>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <div class="form-wrapper">
+        <form id="vendorLoginForm" class="login-form" novalidate>
+          <h3>Vendor Login</h3>
+
+          <div class="form-group">
+            <label for="vendorEmail">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="vendorEmail" name="vendorEmail" placeholder="your@email.com" required>
+              <span class="error-message" id="vendorEmailError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vendorPassword">Password</label>
+            <div class="input-with-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="vendorPassword" name="vendorPassword" placeholder="Enter your password" required>
+              <button type="button" class="toggle-password"><i class="fas fa-eye"></i></button>
+              <span class="error-message" id="vendorPasswordError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="rememberMeVendor">
+              <label for="rememberMeVendor">Remember me</label>
+            </div>
+            <div class="form-group">
+              <a href="vendor-forgot-password.html" class="forgot-password">Forgot password?</a>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Sign In
+            <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <p class="signup-link">Don't have a vendor account? <a href="vendor-signup.html">Register</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor-login.js"></script>
+</body>
+</html>

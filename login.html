@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | WORLDMARKT</title>
+    <meta name="description" content="Login to your WORLDMARKT account to access the global marketplace">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/png" href="worldmarkt-favicon.png">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Branding Section -->
+        <div class="branding-section">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="worldmarkt-favicon.png" alt="WORLDMARKT Logo" />
+                  </div>
+                <h1>WORLDMARKT</h1>
+            </div>
+            <h2>Welcome Back</h2>
+            <p class="tagline">Login to your account to continue your journey</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Marketplace</h3>
+                    <p>Connect with buyers and sellers worldwide</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Platform</h3>
+                    <p>Your data is always protected</p>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>WORLDMARKT has transformed my business with its easy-to-use platform and global reach.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="author">
+                        <img src="/api/placeholder/60/60" alt="Testimonial author" class="author-img">
+                        <p class="author-name">Michael T.</p>
+                        <p class="author-location">London, UK</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="form-wrapper">
+                <form id="loginForm" class="login-form" novalidate>
+                    <h3>Login to Your Account</h3>
+                    
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" name="loginEmail" placeholder="your@email.com" required>
+                            <span class="error-message" id="loginEmailError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <span class="error-message" id="loginPasswordError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="form-group">
+                            <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Sign In
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="social-login">
+                        <p class="divider"><span>or continue with</span></p>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google">
+                                <i class="fab fa-google"></i>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <button onclick="testConnection()" style="padding: 10px; background: red; color: white;">
+  TEST BACKEND CONNECTION
+</button>
+<script>
+  async function testConnection() {
+    try {
+      const response = await fetch('http://localhost:5000/api/test');
+      const data = await response.json();
+      alert(`Backend says: ${data.message}`);
+    } catch (error) {
+      alert(`Connection failed! Error: ${error}`);
+    }
+  }
+</script>
+
+
+                    <p class="signup-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/login.js"></script>
+    <div id="unverifiedModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h2>Account Not Verified</h2>
+    <p>Please check your email and click the verification link we sent.</p>
+    <button id="resendBtn">Resend Verification Email</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+</body>
+</html>

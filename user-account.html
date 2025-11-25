@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldMarkt - User Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/user-account.css">
+    <link rel="stylesheet" href="css/category-dropdown.css">
+    <link rel="stylesheet" href="css/wishlist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/user-account.js"></script>
+    <script defer src="js/category-dropdown.js"></script>
+    <script defer src="js/wishlist.js"></script>
+</head>
+<body>
+<section>
+<header>
+    <div class="top-header">
+    <div class="logo">
+        <img src=logo.png alt="911BUYME Logo">
+    </div>
+    <div class="categories-menu-wrapper">
+        <div class="categories-menu" id="categoriesToggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+          <span>Categories</span>
+        </div>
+      
+        <ul id="categoryDropdown" class="category-dropdown">
+          <li>
+            <a href="fashion.html">Fashion</a>
+            <ul class="subcategory">
+              <li><a href="categories/Fashion & Apparel/Accessories.html/">Accessories</a></li>
+              <li><a href="categories/Fashion & Apparel/Footwear.html/">Footwear</a></li>
+              <li><a href="categories/Fashion & Apparel/Men's clothing.html/">Men's Clothing</a></li>
+              <li><a href="categories/Fashion & Apparel/Women's Clothing.html/">Women's Clothing</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Electronics</a>
+            <ul class="subcategory">
+              <li><a href="categories/Electronics/Cameras & Photography.html/">Camera & Photography</a></li>
+              <li><a href="categories/Electronics/Computers & Accessories.html/">Computers & Accessories</a></li>
+              <li><a href="categories/Electronics/Mobile Phones & Accessories.html/">Gaming & Consoles</a></li>
+              <li><a href="categories/Electronics/Wearable Tech.html/">wearabletech</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Beauty & Health</a>
+            <ul class="subcategory">
+                <li><a href="categories/Health & Beauty/Fitness & Supplements.html/">Fitness & Supplements</a></li>
+                <li><a href="categories/Health & Beauty/Haircare.html/">Haircare</a></li>
+                <li><a href="categories/Health & Beauty/Makeup.html/">Makeup</a></li>
+                <li><a href="categories/Health & Beauty/Skincare.html/">Skincare</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Home & Garden</a>
+            <ul class="subcategory">
+                <li><a href="categories/Home & Living/Furniture.html/">Furniture</a></li>
+                <li><a href="categories/Home & Living/Home Decor.html/">Home Decor</a></li>
+                <li><a href="categories/Home & Living/Kitchen & Dining.html/">Kitchen & Dining</a></li>
+                <li><a href="categories/Home & Living/Lighting & Fixtures.html/">Lighting & Fixtures</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Automotive</a>
+            <ul class="subcategory">
+                <li><a href="categories/Automotive.html/Parts.html/">Auto Parts</a></li>
+                <li><a href="categories/Automotive.html/Car Accessories.html/">Car Accessories</a></li>
+                <li><a href="categories/Automotive.html/Car Electronics.html/">Car Electronics</a></li>
+                <li><a href="categories/Automotive.html/Motorcycles & Bikes.html/">Motorcycles & Bikes</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Real Estate</a>
+            <ul class="subcategory">
+                <li><a href="categories/Real Estate/Apartments for rent.html/">Apartments For Rent</a></li>
+                <li><a href="categories/Real Estate/Commercial properties.html/">Commercial Properties</a></li>
+                <li><a href="categories/Real Estate/Houses for sale.html/">House For Sale</a></li>
+                <li><a href="categories/Real Estate/Land for sale.html/">Land For Sale</a></li>
+                <li><a href="categories/Real Estate/Vacation Rentals.html/">Vacation Rentals</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Food & Beverages</a>
+            <ul class="subcategory">
+                <li><a href="categories/Food & Beverages.html/Beverages.html/">Beverages</a></li>
+                <li><a href="categories/Food & Beverages.html/Groceries.html/">Groceries</a></li>
+                <li><a href="categories/Food & Beverages.html/Organic Food.html/">Organic Food</a></li>
+                <li><a href="categories/Food & Beverages.html/Snacks.html/">Snacks</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Digital Products</a>
+            <ul class="subcategory">
+                <li><a href="categories/Digital Products/Digital Art & Graphics.html/">Digital Art & Graphics</a></li>
+                <li><a href="categories/Digital Products/E-books.html/">E-books</a></li>
+                <li><a href="categories/Digital Products/Online Courses">Online Courses</a></li>
+                <li><a href="categories/Digital Products/Softwares & Apps.html/">Softwares & Apps</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Services</a>
+            <ul class="subcategory">
+                <li><a href="categories/Services/Event Planning.html/">Event Planning</a></li>
+                <li><a href="categories/Services/Freelance Services.html/">Freelance Services</a></li>
+                <li><a href="categories/Services/Home Services.html/">Home Services</a></li>
+                <li><a href="categories/Services/Legal Services.html/">Legal Services</a></li>
+                <li><a href="categories/Services/Photography & Videography.html/">Photography & Videography</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Baby & Kids</a>
+            <ul class="subcategory">
+                <li><a href="categories/Baby & Kids/Baby & Kids.html/">Baby & Kids</a></li>
+                <li><a href="categories/Baby & Kids/Diapers & Wipes.html/">Diapers & Wipes</a></li>
+                <li><a href="categories/Baby & Kids/Strollers & Car Seats.html/">Strollers & Car Seats</a></li>
+                <li><a href="categories/Baby & Kids/Toys & Games.html/">Toys & Games</a></li>
+            </ul>
+        </li>
+          <li>
+            <a href="#">Sports & Outdoors</a>
+            <ul class="subcategory">
+                <li><a href="categories/Sports & Outdoors/Camping & Hiking.html/">Camping & Hiking</a></li>
+                <li><a href="categories/Sports & Outdoors/Cycling.html/">Cycling</a></li>
+                <li><a href="categories/Sports & Outdoors/Gym Equipment.html/">Gym Equipments</a></li>
+                <li><a href="categories/Sports & Outdoors/Water Sports.html/">Water Sports</a></li>
+            </ul>
+        </li>
+          <li><a href="#">More...</a></li>
+        </ul>
+      </div>
+      
+      
+    
+      <div class="search-form">
+        <div class="input-wrapper">
+          <input type="text" placeholder="Search for anything" id="searchInput">
+          <label for="imageUpload" class="image-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <defs>
+                  <radialGradient id="cameraLens" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#5f9ea0"/>
+                    <stop offset="100%" stop-color="#2c3e50"/>
+                  </radialGradient>
+                  <linearGradient id="cameraBody" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4b6cb7"/>
+                    <stop offset="100%" stop-color="#182848"/>
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="6" width="20" height="14" rx="2" ry="2" fill="url(#cameraBody)" />
+                <rect x="7" y="3" width="10" height="4" rx="1" ry="1" fill="#2c3e50" />
+                <circle cx="12" cy="13" r="5" fill="url(#cameraLens)" />
+                <circle cx="12" cy="13" r="2" fill="#ecf0f1" />
+                <circle cx="18" cy="9" r="1.2" fill="#bdc3c7" />
+              </svg>
+          </label>
+          <input type="file" id="imageUpload" accept="image/*" hidden onchange="imageSearch(this)">
+        </div>
+      
+        <button class="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+          </svg>
+        </button>
+      </div>
+
+     <!--Image Result Modal-->
+     <div id="customModal" class="custom-modal">
+        <div class="custom-modal-content" id="modalContent">
+          <!-- Content will be injected by JS -->
+        </div>
+      </div>
+            
+      
+    
+      <!-- Preferences Button Trigger -->
+<div class="pref911-trigger">
+    <button id="pref911-open-modal" class="pref911-btn" aria-label="Open Preferences">
+      <!-- Globe Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#18375d" width="22" height="22">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+          10-4.48 10-10S17.52 2 12 2zm5.93 6h-2.02a8.9 8.9 0 0 0-1.42-2.79A7.958 7.958 0 0 1 17.93 8zM12 
+          4c1.23 1.52 2 3.78 2.09 6H9.91C10 7.78 10.77 5.52 12 4zM8.51 
+          5.21A8.9 8.9 0 0 0 7.09 8H5.07a7.958 7.958 0 0 1 3.44-2.79zM4.07 
+          10h2.2a10.8 10.8 0 0 0 0 4H4.07a7.982 7.982 0 0 1 0-4zm1 6h2.02a8.9 
+          8.9 0 0 0 1.42 2.79A7.958 7.958 0 0 1 5.07 16zm6.93 
+          4c-1.23-1.52-2-3.78-2.09-6h4.18c-.09 2.22-.86 4.48-2.09 
+          6zm3.49-1.21A8.9 8.9 0 0 0 16.91 16h2.02a7.958 7.958 0 0 1-3.44 
+          2.79zM17.73 14a10.8 10.8 0 0 0 0-4h2.2a7.982 7.982 0 0 1 0 4h-2.2z"/>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Preferences Modal -->
+  <div id="pref911-modal" class="pref911-modal">
+    <div class="pref911-modal-box">
+      <button class="pref911-close-btn" aria-label="Close Preferences">&times;</button>
+      <h2 class="pref911-modal-title">🌍 Set Your Preferences</h2>
+  
+      <div class="pref911-group">
+        <label for="pref911-lang">Language</label>
+        <select id="pref911-lang">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+  
+      <div class="pref911-group">
+        <label for="pref911-currency">Currency</label>
+        <select id="pref911-currency">
+          <option value="usd">USD ($)</option>
+          <option value="eur">EUR (€)</option>
+          <option value="gbp">GBP (£)</option>
+          <option value="ngn">NGN (₦)</option>
+        </select>
+      </div>
+  
+      <button class="pref911-save-btn">Save Preferences</button>
+    </div>
+  </div>
+  
+  
+      
+    <div class="cart">
+        <a href="cart.html" id="cartLink">
+            <img src="./assets/icons/cart.svg" width="50" height="50" alt="Cart Icon" class="cart-icon">
+            <span class="cart-counter" id="cartCounter">2</span>
+        </a>
+    </div>
+    
+        
+    <div class="top-header">
+        <!-- Other header content here -->
+        <div class="preferences">
+            <div class="deliver-to" id="deliverTo">
+                <span>Deliver to:</span>
+                <img src="flags/Nigeria.svg" alt="Nigerian Flag" class="flag-icon">
+                <span>NG</span>
+            </div>
+        </div>        
+    </div>        
+        
+
+        <div class="user-options">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+    </svg>Sign in/Register</button>
+        </div>
+    </div>
+</div>
+<div class="middle-header">
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+              </svg>Hot Deals</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+              </svg>What’s New</a></li>
+            <li><a href="#"><img src="trends-icon.png" alt="Trends">Trends</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/>
+                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"/>
+                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/>
+                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"/>
+              </svg>Earn with 911</a></li>
+        </ul>
+    </nav>
+    <div class="find-store-link">
+        <a href="store-locator.html" class="find-store-link">Find Store</a>
+    </div>
+</div>
+</header>
+</section>
+
+<hr style="border: none; height: 4px; background: linear-gradient(to right, #18375D, #00AEEF); margin-bottom: 50px;"> 
+
+    <!-- Account Main Content -->
+    <main class="account-main">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Sidebar -->
+                <aside class="account-sidebar">
+                    <div class="user-profile-summary">
+                        <div class="avatar">
+                            <img src="https://via.placeholder.com/150" alt="User Avatar" id="user-avatar">
+                            <button class="avatar-edit-btn" id="avatar-edit-btn"><i class="fas fa-camera"></i></button>
+                        </div>
+                        <h2 id="user-name">John Doe</h2>
+                        <p class="user-title" id="user-title">Premium Customer</p>
+                        <p class="user-email" id="user-email">john.doe@example.com</p>
+                        <div class="user-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="orders-count">24</span>
+                                <span class="stat-label">Orders</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="reviews-count">15</span>
+                                <span class="stat-label">Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="account-menu">
+                        <ul>
+                            <li class="active"><a href="#profile-section"><i class="fas fa-user"></i> Profile</a></li>
+                            <li><a href="#security-section"><i class="fas fa-shield-alt"></i> Security</a></li>
+                            <li><a href="#orders-section"><i class="fas fa-shopping-bag"></i> Orders</a></li>
+                            <li><a href="#addresses-section"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                            <li><a href="#payment-section"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                            <li><a href="#wishlist-section"><i class="fas fa-heart"></i> Wishlist</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="account-content">
+                    <!-- Profile Section -->
+                    <section id="profile-section" class="account-section active">
+                        <div class="section-header">
+                            <h2>Profile Information</h2>
+                            <p>Manage your personal details and account information</p>
+                        </div>
+                    
+                        <form id="profile-form" class="account-form">
+                            <div class="form-group">
+                                <h3>Basic Information</h3>
+                                <div class="form-field">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="first_name" value="John" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" name="last_name" value="Doe" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="profile-title">Display Name</label>
+                                    <input type="text" id="profile-title" name="profile_title" value="JohnD">
+                                    <p class="form-hint">This will be how your name will be displayed in the account section and in reviews</p>
+                                </div>
+                                <div class="form-field">
+                                    <label for="profile-bio">About Me</label>
+                                    <textarea id="profile-bio" name="profile_bio" rows="4">I'm a frequent shopper who loves discovering unique products from small businesses.</textarea>
+                                </div>
+                            </div>
+                    
+                            <div class="form-group">
+                                <h3>Contact Information</h3>
+                                <div class="form-field">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" value="john.doe@example.com" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567">
+                                </div>
+                            </div>
+                    
+                            <div class="form-group">
+                                <h3>Social Profiles</h3>
+                                <div class="form-field with-icon">
+                                    <i class="fab fa-facebook"></i>
+                                    <input type="url" id="facebook" name="facebook" placeholder="Facebook profile URL">
+                                </div>
+                                <div class="form-field with-icon">
+                                    <i class="fab fa-instagram"></i>
+                                    <input type="url" id="instagram" name="instagram" placeholder="Instagram profile URL">
+                                </div>
+                                <div class="form-field with-icon">
+                                    <i class="fab fa-twitter"></i>
+                                    <input type="url" id="twitter" name="twitter" placeholder="Twitter profile URL">
+                                </div>
+                            </div>
+                    
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" id="cancel-profile-btn">Cancel</button>
+                                <button type="submit" class="btn btn-primary" id="save-profile-btn">Save Changes</button>
+                            </div>
+                        </form>                
+                    </section>
+
+                    <!-- Security Section -->
+                    <section id="security-section" class="account-section">
+                        <div class="section-header">
+                            <h2>Security Settings</h2>
+                            <p>Manage your account security and authentication</p>
+                        </div>
+                    
+                        <div class="security-content">
+                            <div class="security-card">
+                                <div class="security-info">
+                                    <div class="security-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </div>
+                                    <div class="security-details">
+                                        <h3>Password</h3>
+                                        <p>Last changed 3 months ago</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline" id="change-password-btn">Change Password</button>
+                            </div>
+                    
+                            <div class="security-card">
+                                <div class="security-info">
+                                    <div class="security-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="security-details">
+                                        <h3>Two-Factor Authentication</h3>
+                                        <p>Add an extra layer of security to your account</p>
+                                    </div>
+                                </div>
+                                <div class="security-status">
+                                    <span class="status-badge inactive">Inactive</span>
+                                    <button class="btn btn-outline" id="enable-2fa-btn">Enable 2FA</button>
+                                </div>
+                            </div>
+                    
+                            <div class="security-card">
+                                <div class="security-info">
+                                    <div class="security-icon">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="security-details">
+                                        <h3>Active Sessions</h3>
+                                        <p>View and manage your logged-in devices</p>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline" id="view-sessions-btn">View Sessions</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Change Password Modal -->
+                        <div class="modal" id="password-modal">
+                            <div class="modal-content small">
+                                <div class="modal-header">
+                                    <h3>Change Password</h3>
+                                    <button class="modal-close" id="close-password-modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="password-form">
+                                        <div class="form-field">
+                                            <label for="current-password">Current Password</label>
+                                            <input type="password" id="current-password" name="current_password" required>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="new-password">New Password</label>
+                                            <input type="password" id="new-password" name="new_password" required>
+                                            <div class="password-strength">
+                                                <span class="strength-bar"></span>
+                                                <span class="strength-bar"></span>
+                                                <span class="strength-bar"></span>
+                                                <span class="strength-text">Password strength</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="confirm-password">Confirm New Password</label>
+                                            <input type="password" id="confirm-password" name="confirm_password" required>
+                                        </div>
+                                        <div class="password-requirements">
+                                            <p>Password must contain:</p>
+                                            <ul>
+                                                <li class="req-length">At least 8 characters</li>
+                                                <li class="req-uppercase">One uppercase letter</li>
+                                                <li class="req-number">One number</li>
+                                                <li class="req-special">One special character</li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" id="cancel-password-btn">Cancel</button>
+                                    <button class="btn btn-primary" id="save-password-btn" disabled>Change Password</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- 2FA Setup Modal -->
+                        <div class="modal" id="twofa-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Set Up Two-Factor Authentication</h3>
+                                    <button class="modal-close" id="close-twofa-modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="twofa-step" id="twofa-step1">
+                                        <h4>Step 1: Choose Authentication Method</h4>
+                                        <div class="twofa-options">
+                                            <div class="twofa-option active">
+                                                <input type="radio" id="twofa-app" name="twofa_method" value="app" checked>
+                                                <label for="twofa-app">
+                                                    <i class="fas fa-mobile-alt"></i>
+                                                    <h5>Authentication App</h5>
+                                                    <p>Use an app like Google Authenticator or Authy</p>
+                                                </label>
+                                            </div>
+                                            <div class="twofa-option">
+                                                <input type="radio" id="twofa-sms" name="twofa_method" value="sms">
+                                                <label for="twofa-sms">
+                                                    <i class="fas fa-sms"></i>
+                                                    <h5>SMS Text Message</h5>
+                                                    <p>Receive codes via text message</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="modal-actions">
+                                            <button class="btn btn-primary" id="twofa-next-btn">Next</button>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="twofa-step" id="twofa-step2" style="display:none;">
+                                        <h4>Step 2: Set Up Authenticator App</h4>
+                                        <div class="twofa-setup">
+                                            <div class="twofa-qr-code">
+                                                <img src="https://via.placeholder.com/200" alt="QR Code">
+                                                <p>Scan this QR code with your authenticator app</p>
+                                            </div>
+                                            <div class="twofa-manual">
+                                                <p>Or enter this code manually:</p>
+                                                <div class="twofa-secret-code">JBSWY3DPEHPK3PXP</div>
+                                                <div class="form-field">
+                                                    <label for="twofa-code">Enter 6-digit code to verify</label>
+                                                    <input type="text" id="twofa-code" name="twofa_code" placeholder="123456" maxlength="6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-actions">
+                                            <button class="btn btn-secondary" id="twofa-back-btn">Back</button>
+                                            <button class="btn btn-primary" id="twofa-verify-btn" disabled>Verify</button>
+                                        </div>
+                                    </div>
+                    
+                                    <div class="twofa-step" id="twofa-step3" style="display:none;">
+                                        <h4>Step 3: Backup Codes</h4>
+                                        <div class="twofa-backup-codes">
+                                            <p>Save these backup codes in a secure place. Each code can be used once.</p>
+                                            <div class="codes-list">
+                                                <span>3F5T-9J2K-M7N4</span>
+                                                <span>P8Q2-R6S1-T4V9</span>
+                                                <span>W1X3-Y5Z7-U9B2</span>
+                                                <span>C4D6-E8F0-G2H4</span>
+                                                <span>J6K8-L0M2-N4P6</span>
+                                            </div>
+                                            <button class="btn btn-outline" id="download-codes-btn">
+                                                <i class="fas fa-download"></i> Download Codes
+                                            </button>
+                                            <button class="btn btn-outline" id="print-codes-btn">
+                                                <i class="fas fa-print"></i> Print Codes
+                                            </button>
+                                        </div>
+                                        <div class="modal-actions">
+                                            <button class="btn btn-primary" id="twofa-complete-btn">Finish Setup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Active Sessions Modal -->
+                        <div class="modal" id="sessions-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Active Sessions</h3>
+                                    <button class="modal-close" id="close-sessions-modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="sessions-list">
+                                        <div class="session-item current">
+                                            <div class="session-icon">
+                                                <i class="fas fa-desktop"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <h4>Chrome on Windows</h4>
+                                                <p class="session-meta">
+                                                    <span class="session-location">New York, US (IP: 192.168.1.1)</span>
+                                                    <span class="session-time">Active now</span>
+                                                </p>
+                                            </div>
+                                            <div class="session-status">
+                                                <span class="status-badge active">Current</span>
+                                            </div>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-icon">
+                                                <i class="fas fa-mobile-alt"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <h4>Safari on iPhone</h4>
+                                                <p class="session-meta">
+                                                    <span class="session-location">San Francisco, US (IP: 203.0.113.45)</span>
+                                                    <span class="session-time">Last active: 2 hours ago</span>
+                                                </p>
+                                            </div>
+                                            <button class="btn btn-text danger" data-session-id="s2">Sign Out</button>
+                                        </div>
+                                        <div class="session-item">
+                                            <div class="session-icon">
+                                                <i class="fas fa-desktop"></i>
+                                            </div>
+                                            <div class="session-details">
+                                                <h4>Firefox on Mac</h4>
+                                                <p class="session-meta">
+                                                    <span class="session-location">London, UK (IP: 198.51.100.22)</span>
+                                                    <span class="session-time">Last active: 3 days ago</span>
+                                                </p>
+                                            </div>
+                                            <button class="btn btn-text danger" data-session-id="s3">Sign Out</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-danger" id="signout-all-btn">Sign Out From All Devices</button>
+                                </div>
+                            </div>
+                        </div>                
+                    </section>
+
+                    <!-- Orders Section -->
+                    <section id="orders-section" class="account-section">
+                        <div class="section-header">
+                            <h2>Your Orders</h2>
+                            <p>View and manage your purchase history</p>
+                        </div>
+
+                        <div class="orders-filters">
+                            <div class="filter-group">
+                                <label for="order-status">Filter by status:</label>
+                                <select id="order-status">
+                                    <option value="all">All Orders</option>
+                                    <option value="processing">Processing</option>
+                                    <option value="shipped">Shipped</option>
+                                    <option value="delivered">Delivered</option>
+                                    <option value="cancelled">Cancelled</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="order-date">Filter by date:</label>
+                                <select id="order-date">
+                                    <option value="30days">Last 30 days</option>
+                                    <option value="3months">Last 3 months</option>
+                                    <option value="6months">Last 6 months</option>
+                                    <option value="year">Last year</option>
+                                    <option value="all">All time</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-meta">
+                                        <span class="order-number">Order #12345</span>
+                                        <span class="order-date">Placed on May 15, 2023</span>
+                                    </div>
+                                    <div class="order-status">
+                                        <span class="status-badge delivered">Delivered</span>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="https://via.placeholder.com/80" alt="Product Image" class="item-image">
+                                        <div class="item-details">
+                                            <h4 class="item-name">Premium Wireless Headphones</h4>
+                                            <p class="item-sku">SKU: HP-2023-BLK</p>
+                                            <p class="item-price">$129.99 x 1</p>
+                                        </div>
+                                        <div class="item-actions">
+                                            <button class="btn btn-text" data-item="1">View Details</button>
+                                            <button class="btn btn-text" data-item="1">Buy Again</button>
+                                            <button class="btn btn-text" data-item="1">Return Item</button>
+                                        </div>
+                                    </div>
+                                    <div class="order-item">
+                                        <img src="https://via.placeholder.com/80" alt="Product Image" class="item-image">
+                                        <div class="item-details">
+                                            <h4 class="item-name">Phone Charging Stand</h4>
+                                            <p class="item-sku">SKU: CS-2023-WHT</p>
+                                            <p class="item-price">$24.99 x 2</p>
+                                        </div>
+                                        <div class="item-actions">
+                                            <button class="btn btn-text" data-item="2">View Details</button>
+                                            <button class="btn btn-text" data-item="2">Buy Again</button>
+                                            <button class="btn btn-text" data-item="2">Return Item</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span class="total-label">Total:</span>
+                                        <span class="total-amount">$179.97</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline">Track Package</button>
+                                        <button class="btn btn-outline">Leave Review</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-meta">
+                                        <span class="order-number">Order #12344</span>
+                                        <span class="order-date">Placed on April 28, 2023</span>
+                                    </div>
+                                    <div class="order-status">
+                                        <span class="status-badge shipped">Shipped</span>
+                                    </div>
+                                </div>
+                                <div class="order-items">
+                                    <div class="order-item">
+                                        <img src="https://via.placeholder.com/80" alt="Product Image" class="item-image">
+                                        <div class="item-details">
+                                            <h4 class="item-name">Smart Watch Pro</h4>
+                                            <p class="item-sku">SKU: SW-2023-BLK</p>
+                                            <p class="item-price">$199.99 x 1</p>
+                                        </div>
+                                        <div class="item-actions">
+                                            <button class="btn btn-text" data-item="3">View Details</button>
+                                            <button class="btn btn-text" data-item="3">Track Package</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        <span class="total-label">Total:</span>
+                                        <span class="total-amount">$199.99</span>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-outline">View Invoice</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="orders-pagination">
+                            <button class="btn btn-outline" disabled>Previous</button>
+                            <span class="page-info">Page 1 of 3</span>
+                            <button class="btn btn-outline">Next</button>
+                        </div>
+                    </section>
+
+                    <!-- Addresses Section -->
+                    <section id="addresses-section" class="account-section">
+                        <div class="section-header">
+                            <h2>Your Addresses</h2>
+                            <p>Manage your shipping and billing addresses</p>
+                        </div>
+
+                        <div class="addresses-actions">
+                            <button class="btn btn-primary" id="add-address-btn">
+                                <i class="fas fa-plus"></i> Add New Address
+                            </button>
+                        </div>
+
+                        <div class="addresses-list">
+                            <div class="address-card default">
+                                <div class="address-header">
+                                    <h3>Primary Shipping Address</h3>
+                                    <span class="default-badge">Default</span>
+                                </div>
+                                <div class="address-details">
+                                    <p>John Doe</p>
+                                    <p>123 Main Street</p>
+                                    <p>Apartment 4B</p>
+                                    <p>New York, NY 10001</p>
+                                    <p>United States</p>
+                                    <p class="address-phone">Phone: +1 (555) 123-4567</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-text edit-address" data-address="1">Edit</button>
+                                    <button class="btn btn-text danger remove-address" data-address="1">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Billing Address</h3>
+                                </div>
+                                <div class="address-details">
+                                    <p>John Doe</p>
+                                    <p>456 Business Avenue</p>
+                                    <p>Suite 200</p>
+                                    <p>Brooklyn, NY 11201</p>
+                                    <p>United States</p>
+                                    <p class="address-phone">Phone: +1 (555) 987-6543</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-text edit-address" data-address="2">Edit</button>
+                                    <button class="btn btn-text set-default" data-address="2">Set as Default</button>
+                                    <button class="btn btn-text danger remove-address" data-address="2">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add/Edit Address Modal -->
+                        <div class="modal" id="address-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="address-modal-title">Add New Address</h3>
+                                    <button class="modal-close" id="close-address-modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="address-form">
+                                        <input type="hidden" id="address-id" name="address_id" value="">
+                                        <div class="form-group">
+                                            <div class="form-field">
+                                                <label for="address-type">Address Type</label>
+                                                <select id="address-type" name="address_type">
+                                                    <option value="shipping">Shipping Address</option>
+                                                    <option value="billing">Billing Address</option>
+                                                    <option value="both">Shipping & Billing Address</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-field checkbox-field">
+                                                <input type="checkbox" id="default-address" name="default_address">
+                                                <label for="default-address">Set as default address</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-field">
+                                                <label for="first-name">First Name</label>
+                                                <input type="text" id="address-first-name" name="first_name" required>
+                                            </div>
+                                            <div class="form-field">
+                                                <label for="last-name">Last Name</label>
+                                                <input type="text" id="address-last-name" name="last_name" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for="company">Company (Optional)</label>
+                                            <input type="text" id="company" name="company">
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for="address-line1">Address Line 1</label>
+                                            <input type="text" id="address-line1" name="address_line1" required>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for="address-line2">Address Line 2 (Optional)</label>
+                                            <input type="text" id="address-line2" name="address_line2">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-field">
+                                                <label for="city">City</label>
+                                                <input type="text" id="city" name="city" required>
+                                            </div>
+                                            <div class="form-field">
+                                                <label for="state">State/Province</label>
+                                                <input type="text" id="state" name="state" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="form-field">
+                                                <label for="zip-code">ZIP/Postal Code</label>
+                                                <input type="text" id="zip-code" name="zip_code" required>
+                                            </div>
+                                            <div class="form-field">
+                                                <label for="country">Country</label>
+                                                <select id="country" name="country" required>
+                                                    <option value="US">United States</option>
+                                                    <option value="CA">Canada</option>
+                                                    <option value="UK">United Kingdom</option>
+                                                    <option value="AU">Australia</option>
+                                                    <!-- More countries would be added here -->
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-field">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="address-phone" name="phone" required>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" id="cancel-address-btn">Cancel</button>
+                                    <button class="btn btn-primary" id="save-address-btn">Save Address</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Methods Section -->
+                    <section id="payment-section" class="account-section">
+                        <div class="section-header">
+                            <h2>Payment Methods</h2>
+                            <p>Manage your saved payment options</p>
+                        </div>
+
+                        <div class="payment-actions">
+                            <button class="btn btn-primary" id="add-payment-method-btn">
+                                <i class="fas fa-plus"></i> Add Payment Method
+                            </button>
+                        </div>
+
+                        <div class="payment-methods-list">
+                            <div class="payment-card default">
+                                <div class="payment-icon">
+                                    <i class="fab fa-cc-visa"></i>
+                                </div>
+                                <div class="payment-details">
+                                    <h3>Visa ending in 4242</h3>
+                                    <p>Expires 05/2025</p>
+                                </div>
+                                <div class="payment-status">
+                                    <span class="default-badge">Default</span>
+                                </div>
+                                <div class="payment-actions">
+                                    <button class="btn btn-text edit-payment" data-payment="1">Edit</button>
+                                    <button class="btn btn-text danger remove-payment" data-payment="1">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="payment-card">
+                                <div class="payment-icon">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </div>
+                                <div class="payment-details">
+                                    <h3>Mastercard ending in 5555</h3>
+                                    <p>Expires 11/2024</p>
+                                </div>
+                                <div class="payment-actions">
+                                    <button class="btn btn-text set-default-payment" data-payment="2">Set as Default</button>
+                                    <button class="btn btn-text edit-payment" data-payment="2">Edit</button>
+                                    <button class="btn btn-text danger remove-payment" data-payment="2">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="payment-card">
+                                <div class="payment-icon">
+                                    <i class="fab fa-paypal"></i>
+                                </div>
+                                <div class="payment-details">
+                                    <h3>PayPal Account</h3>
+                                    <p>john.doe@example.com</p>
+                                </div>
+                                <div class="payment-actions">
+                                    <button class="btn btn-text set-default-payment" data-payment="3">Set as Default</button>
+                                    <button class="btn btn-text danger remove-payment" data-payment="3">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add/Edit Payment Method Modal -->
+                        <div class="modal" id="payment-modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 id="payment-modal-title">Add Payment Method</h3>
+                                    <button class="modal-close" id="close-payment-modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="payment-form">
+                                        <input type="hidden" id="payment-id" name="payment_id" value="">
+                                        <div class="payment-method-options">
+                                            <div class="payment-option active" data-method="card">
+                                                <i class="fab fa-cc-visa"></i>
+                                                <span>Credit/Debit Card</span>
+                                            </div>
+                                            <div class="payment-option" data-method="paypal">
+                                                <i class="fab fa-paypal"></i>
+                                                <span>PayPal</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-method-content" id="card-payment-form">
+                                            <div class="form-field">
+                                                <label for="card-number">Card Number</label>
+                                                <input type="text" id="card-number" name="card_number" placeholder="1234 5678 9012 3456">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="form-field">
+                                                    <label for="card-name">Name on Card</label>
+                                                    <input type="text" id="card-name" name="card_name">
+                                                </div>
+                                                <div class="form-field">
+                                                    <label for="card-expiry">Expiry Date</label>
+                                                    <input type="text" id="card-expiry" name="card_expiry" placeholder="MM/YY">
+                                                </div>
+                                                <div class="form-field">
+                                                    <label for="card-cvv">CVV</label>
+                                                    <input type="text" id="card-cvv" name="card_cvv" placeholder="123">
+                                                </div>
+                                            </div>
+                                            <div class="form-field checkbox-field">
+                                                <input type="checkbox" id="default-payment" name="default_payment">
+                                                <label for="default-payment">Set as default payment method</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-method-content" id="paypal-payment-form" style="display: none;">
+                                            <div class="paypal-connect">
+                                                <p>You'll be redirected to PayPal to securely connect your account.</p>
+                                                <button type="button" class="btn btn-primary" id="connect-paypal-btn">
+                                                    <i class="fab fa-paypal"></i> Connect PayPal Account
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" id="cancel-payment-btn">Cancel</button>
+                                    <button class="btn btn-primary" id="save-payment-btn">Save Payment Method</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Wishlist Section -->
+                    <section id="wishlist-section" class="account-section">
+                        <div class="section-header">
+                            <h2>Your Wishlist</h2>
+                            <p>Save items you love for later</p>
+                        </div>
+
+                        <div class="wishlist-filters">
+                            <div class="filter-group">
+                                <label for="wishlist-sort">Sort by:</label>
+                                <select id="wishlist-sort">
+                                    <option value="recent">Recently Added</option>
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="name">Product Name</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="wishlist-grid">
+                            <div class="wishlist-item">
+                                <button class="wishlist-remove" data-item="1">&times;</button>
+                                <div class="wishlist-image">
+                                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                                    <div class="wishlist-badge">Sale</div>
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3 class="wishlist-title">Wireless Bluetooth Earbuds</h3>
+                                    <div class="wishlist-price">
+                                        <span class="current-price">$59.99</span>
+                                        <span class="original-price">$79.99</span>
+                                    </div>
+                                    <div class="wishlist-stock in-stock">In Stock</div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-outline">Add to Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="wishlist-item">
+                                <button class="wishlist-remove" data-item="2">&times;</button>
+                                <div class="wishlist-image">
+                                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3 class="wishlist-title">Smart Fitness Tracker Watch</h3>
+                                    <div class="wishlist-price">
+                                        <span class="current-price">$89.99</span>
+                                    </div>
+                                    <div class="wishlist-stock in-stock">In Stock</div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-outline">Add to Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="wishlist-item">
+                                <button class="wishlist-remove" data-item="3">&times;</button>
+                                <div class="wishlist-image">
+                                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                                    <div class="wishlist-badge">Out of Stock</div>
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3 class="wishlist-title">Premium Leather Backpack</h3>
+                                    <div class="wishlist-price">
+                                        <span class="current-price">$129.99</span>
+                                    </div>
+                                    <div class="wishlist-stock out-of-stock">Out of Stock</div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-outline" disabled>Notify Me</button>
+                                </div>
+                            </div>
+
+                            <div class="wishlist-item">
+                                <button class="wishlist-remove" data-item="4">&times;</button>
+                                <div class="wishlist-image">
+                                    <img src="https://via.placeholder.com/200" alt="Product Image">
+                                </div>
+                                <div class="wishlist-details">
+                                    <h3 class="wishlist-title">Portable Bluetooth Speaker</h3>
+                                    <div class="wishlist-price">
+                                        <span class="current-price">$45.99</span>
+                                    </div>
+                                    <div class="wishlist-stock in-stock">In Stock</div>
+                                </div>
+                                <div class="wishlist-actions">
+                                    <button class="btn btn-outline">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wishlist-empty" style="display: none;">
+                            <div class="empty-state">
+                                <i class="fas fa-heart"></i>
+                                <h3>Your Wishlist is Empty</h3>
+                                <p>Save your favorite items here for easy access later</p>
+                                <button class="btn btn-primary">Start Shopping</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Avatar Upload Modal -->
+    <div class="modal" id="avatar-modal">
+        <div class="modal-content small">
+            <div class="modal-header">
+                <h3>Update Profile Picture</h3>
+                <button class="modal-close" id="close-avatar-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="avatar-upload-container">
+                    <div class="avatar-preview">
+                        <img id="avatar-preview" src="https://via.placeholder.com/200" alt="Avatar Preview">
+                    </div>
+                    <div class="upload-options">
+                        <button class="btn btn-outline" id="upload-from-device">
+                            <i class="fas fa-upload"></i> Upload Photo
+                        </button>
+                        <input type="file" id="avatar-file-input" accept="image/*" style="display: none;">
+                        <button class="btn btn-outline" id="remove-avatar">
+                            <i class="fas fa-trash-alt"></i> Remove Photo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-avatar-btn">Cancel</button>
+                <button class="btn btn-primary" id="save-avatar-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content small">
+            <div class="modal-header">
+                <h3 id="confirmation-title">Confirm Action</h3>
+                <button class="modal-close" id="close-confirmation-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="confirmation-message">Are you sure you want to perform this action?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-confirmation-btn">Cancel</button>
+                <button class="btn btn-primary" id="confirm-action-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="notification success" id="success-notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="notification-message">Changes saved successfully!</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Error Notification -->
+    <div class="notification error" id="error-notification">
+        <div class="notification-content">
+            <i class="fas fa-exclamation-circle"></i>
+            <span class="notification-message">An error occurred. Please try again.</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+<hr style="border: none; height: 4px; background: linear-gradient(to right, #18375D, #00AEEF); margin: 20px;">
+
+<section>
+    <footer>
+        <div class="footer">
+            <!-- Footer Main Columns -->
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">News & Blog</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="faqs.html">FAQ’s</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Orders & Returns</h3>
+                <ul>
+                    <li><a href="track-order.html">Track Order</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Return & Exchange</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Shopping</h3>
+                <ul>
+                    <li><a href="#">wishlist.html</a></li>
+                    <li><a href="#">Shop by Brand</a></li>
+                    <li><a href="#">Our Apps</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/911buyme/">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://twitter.com/911buyme">Twitter</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Middle Support Section -->
+        <div class="footer-support">
+            <div class="support-item">
+                <span class="icon">@</span>
+                <p>Didn't find what you were looking for?<br><a href="#">Contact Us</a></p>
+            </div>
+            <div class="support-item">
+                <span class="icon">⚓</span>
+                <p>How can we help you today?<br><a href="#">Help Center</a></p>
+            </div>
+            <div class="support-item">
+                <span class="icon">☺</span>
+                <p>We’d love to hear what you think!<br><a href="#">Give Feedback</a></p>
+            </div>
+        </div>
+    
+        <!-- Bottom Footer Section -->
+        <div class="footer-bottom">
+            <p>Copyright © 2025 911Buyme, All rights reserved. <a href="#">Privacy Notice</a> <a href="#">Terms of Use</a></p>
+            <div class="icons">
+                <div class="accessibility-btn">☮</div>
+                <div class="back-to-top">↑</div>
+            </div>
+        </div>
+    </footer>    
+</section>
+
+<!-- Deliver To Modal -->
+<div id="deliverToModal" class="deliver-modal">
+    <div class="deliver-modal__content">
+        <div class="deliver-modal__header">
+            <h2 class="deliver-modal__title">Specify Your Delivery Location</h2>
+            <span class="deliver-modal__close" id="closeDeliverTo">&times;</span>
+        </div>
+        
+        <div class="deliver-modal__body">
+            <p class="deliver-modal__notice">Shipping options and delivery fees vary based on your location. Please provide your address for accurate information.</p>
+            
+            <div class="deliver-modal__auth-section">
+                <button id="signInBtn" class="deliver-modal__auth-btn">
+                    <span class="icon">🔒</span>
+                    Sign in to use saved addresses
+                </button>
+                <p class="deliver-modal__divider">— or enter manually —</p>
+            </div>
+            
+            <div class="deliver-modal__form-group">
+                <label for="countrySelect" class="deliver-modal__label">Country/Region:</label>
+                <select id="countrySelect" class="deliver-modal__select">
+                    <option value="">Select Country</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="KE">Kenya</option>
+                </select>
+            </div>
+            
+            <div class="deliver-modal__form-group">
+                <label for="zipCode" class="deliver-modal__label">Postal/ZIP Code:</label>
+                <input type="text" id="zipCode" class="deliver-modal__input" placeholder="e.g. 100001 or NW1 6XE">
+            </div>
+        </div>
+        
+        <div class="deliver-modal__footer">
+            <button id="saveLocation" class="deliver-modal__save-btn">Save Delivery Location</button>
+            <p class="deliver-modal__disclaimer">Your location helps us provide accurate delivery times and fees.</p>
+        </div>
+    </div>
+</div>               
+
+</body>
+</html>

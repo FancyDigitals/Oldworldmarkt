@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verify Vendor | WORLDMARKT</title>
+  <link rel="stylesheet" href="css/verify.css" />
+  <style>
+    body {font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#f6f8fb; margin:0;}
+    .card {max-width:560px; margin:14vh auto; background:#fff; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.06); padding:36px; text-align:center}
+    h1 {font-size:22px; margin:0 0 12px; color:#2a2f45}
+    .muted {color:#6b7280; margin:0 0 18px}
+    .ok {color:#0ea5e9}
+    .err {color:#ef4444}
+    .btn {display:inline-block; margin-top:18px; padding:12px 18px; border-radius:8px; background:#1E90FF; color:#fff; text-decoration:none}
+    code {background:#f1f5f9; padding:2px 6px; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Verifying your vendor account…</h1>
+    <p id="status" class="muted">Please wait a moment.</p>
+    <a id="toLogin" href="vendor-login.html" class="btn" style="display:none">Go to login</a>
+  </div>
+
+  <script>
+    (async () => {
+      const API_BASE = "http://localhost:5000";
+
+      const q = new URLSearchParams(location.search);
+      const token = q.get("token");
+      const email = q.get("email");
+      const statusEl = document.getElementById("status");
+      const toLogin = document.getElementById("toLogin");
+
+      if (!token || !email) {
+        statusEl.className = "muted err";
+        statusEl.textContent = "Invalid or missing verification link.";
+        return;
+      }
+
+      const url = `${API_BASE}/api/vendor/auth/verify?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
+      console.log("VERIFY CALL →", url);
+
+      try {
+        const res = await fetch(url, { method: "GET" });
+        const text = await res.text();       // robust: handle non-JSON too
+        let data = {};
+        try { data = JSON.parse(text); } catch (_) {}
+
+        if (res.ok) {
+          statusEl.className = "muted ok";
+          statusEl.textContent = "✅ Email verified. Redirecting to vendor login…";
+          toLogin.style.display = "inline-block";
+          setTimeout(() => (location.href = "vendor-login.html"), 1200);
+        } else {
+          statusEl.className = "muted err";
+          statusEl.innerHTML = `Verification failed (${res.status}). ${data.message || "Please request a new link."}<br><br><code>${url}</code>`;
+        }
+      } catch (e) {
+        statusEl.className = "muted err";
+        statusEl.textContent = "Server error during verification.";
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+</html>
