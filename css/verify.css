@@ -1,0 +1,156 @@
+/* VERIFICATION SECTION */
+.verify-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f9fa;
+    padding: 2rem;
+}
+
+.verify-container {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.verify-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.verify-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sub-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* ANIMATIONS */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+#verify-status {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 480px) {
+    .verify-card {
+        padding: 1.5rem;
+    }
+    
+    .gradient-text {
+        font-size: 1.5rem;
+    }
+}
+/* === VERIFY PAGE STYLING === */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #0d1b2a, #1b263b, #0d1b2a);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.verify-section {
+  width: 100%;
+  text-align: center;
+}
+
+.verify-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.verify-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.gradient-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #1e90ff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.sub-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  animation: fadePulse 2s infinite;
+}
+
+/* === LOADER === */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  border-top: 4px solid #00c6ff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+/* === ANIMATIONS === */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* === SUCCESS & ERROR COLORS === */
+.success-text {
+  color: #00ffb3;
+}
+
+.error-text {
+  color: #ff4d4d;
+}

@@ -1,0 +1,131 @@
+.daily-deals-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.daily-deals-stories-header {
+  padding: 10px;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-daily-deals {
+  align-self: flex-end;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.story-thumbnails {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+.story-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.story-thumb {
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  flex: none;
+  width: 80px;
+}
+
+.story-thumb img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff4d4d;
+  object-fit: cover;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease;
+}
+
+.story-thumb:hover img {
+  transform: scale(1.05);
+}
+
+.daily-deals-fullscreen {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.deal-story-full {
+  min-width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #000;
+}
+
+.deal-story-full img {
+  width: auto;
+  height: 90%;
+  max-height: 90%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+}
+
+.deal-story-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 16px 20px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 90%;
+}
+
+.deal-story-overlay h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.deal-story-overlay span {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.deal-story-overlay p {
+  margin: 6px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.old {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-left: 6px;
+}
+
+.view-product {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}

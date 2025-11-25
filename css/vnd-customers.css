@@ -1,0 +1,811 @@
+/* Customer Page Specific Styles */
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.table-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.table-count {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.table-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.table-filters select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: white;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Customer Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 500;
+    color: var(--dark-color);
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.customer-cell {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.customer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name {
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.customer-id {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-email {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.customer-phone {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.order-count, .total-spent, .last-order {
+    font-weight: 500;
+}
+
+.total-spent {
+    color: var(--success-color);
+}
+
+.last-order {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 5px;
+}
+
+.action-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.view-btn:hover {
+    color: var(--primary-color);
+}
+
+.message-btn:hover {
+    color: #28a745;
+}
+
+.more-btn:hover {
+    color: var(--dark-color);
+}
+
+/* Table Footer */
+.table-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pagination-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Customer View Modal Specific Styles */
+.customer-avatar-lg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+}
+
+.customer-avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin-bottom: 5px;
+}
+
+.info-section {
+    margin-bottom: 25px;
+}
+
+.info-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.info-label {
+    font-weight: 500;
+    width: 100px;
+    color: var(--secondary-color);
+}
+
+.info-value {
+    flex: 1;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+
+.recent-orders {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-item {
+    display: flex;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-id {
+    flex: 1;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.order-date, .order-amount {
+    width: 100px;
+    font-size: 14px;
+}
+
+.order-amount {
+    font-weight: 500;
+    text-align: right;
+}
+
+.order-status {
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.order-status.shipped {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+}
+
+.order-status.delivered {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+}
+
+.view-all-orders {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Message Modal Specific Styles */
+.modal-body .form-group {
+    margin-bottom: 20px;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.modal-body input[type="text"],
+.modal-body textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.modal-body textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .table-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-item {
+        flex-wrap: wrap;
+    }
+    
+    .order-id {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .order-date, .order-amount, .order-status {
+        width: auto;
+        flex: 1;
+    }
+}
+/* Modal Base Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 30px;
+    margin: 20px;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Customer View Modal Specific Styles */
+.customer-avatar-lg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid #f8f9fa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.customer-avatar-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    margin-bottom: 5px;
+    color: var(--dark-color);
+    font-size: 24px;
+}
+
+.modal-header .customer-id {
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.info-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.info-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.info-label {
+    font-weight: 600;
+    width: 120px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.info-value {
+    flex: 1;
+    font-size: 15px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recent-orders {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.order-item:hover {
+    background-color: #f9f9f9;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-id {
+    flex: 1;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.order-date, .order-amount {
+    width: 120px;
+    font-size: 14px;
+}
+
+.order-amount {
+    font-weight: 600;
+    text-align: right;
+    color: var(--success-color);
+}
+
+.order-status {
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.order-status.shipped {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+}
+
+.order-status.delivered {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+}
+
+.view-all-orders {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.view-all-orders:hover {
+    color: var(--primary-dark-color);
+}
+
+.view-all-orders::after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.view-all-orders:hover::after {
+    transform: translateX(3px);
+}
+
+/* Message Modal Specific Styles */
+.message-modal .modal-content {
+    max-width: 600px;
+}
+
+.message-modal .modal-header {
+    margin-bottom: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.message-modal .customer-avatar-lg {
+    margin: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.message-modal h2 {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 15px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.5;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.secondary-btn {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: var(--dark-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #ccc;
+}
+
+.primary-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px rgba(67, 97, 238, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .info-label {
+        width: 100%;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .order-id, .order-date, .order-amount, .order-status {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .message-modal .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .secondary-btn, .primary-btn {
+        width: 100%;
+    }
+}

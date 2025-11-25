@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    color: #013159;
+    font-weight: 600;
+    background: #fff;
+    margin: 0;
+}
+
+/* Header Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f8f9fa;
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+}
+
+.logo img {
+    max-height: 50px;
+    margin-left: 15px;
+}
+
+.user-options {
+    display: flex;
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    background-color: #0d3259;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 30%;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart .cart-counter {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.categories-container {
+    position: relative;
+    display: inline-block;
+}
+
+.categories-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 200px;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background: #f4f4f4;
+}
+
+/* Product Grid */
+.product-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.filter-section {
+    margin: 20px;
+}

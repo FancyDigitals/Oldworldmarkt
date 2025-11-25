@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wishlist-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+  
+  .wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wishlist-header h2 {
+    font-size: 24px;
+    color: #18375d;
+  }
+  
+  #share-wishlist-btn {
+    background: #1f4c81;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #share-wishlist-btn:hover {
+    background: #18375d;
+  }
+  
+  .wishlist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .wishlist-item {
+    display: flex;
+    background: #fafafa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  }
+  
+  .wishlist-item img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .wishlist-info {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .wishlist-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #18375d;
+  }
+  
+  .wishlist-info p {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #1f4c81;
+  }
+  
+  .wishlist-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .wishlist-actions button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .move-to-cart {
+    background: #18375d;
+    color: white;
+  }
+  
+  .remove-item {
+    background: #e74c3c;
+    color: white;
+  }
+
+  #share-link-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+#share-link {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#copy-link {
+  background: #1f4c81;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#copy-link:hover {
+  background: #18375d;
+}

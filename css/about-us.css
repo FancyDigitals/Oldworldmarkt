@@ -1,0 +1,120 @@
+/*Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #18375D;
+    font-weight: bold;
+}
+
+.shop-btn {
+    background: #18375D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+/* Centering Main Content to Footer Width */
+section {
+    max-width: 1200px;  /* Adjust width to match footer */
+    margin: 0 auto;     /* Centers content */
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #18375D, #00AEEF);
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/*ABOUT US CONTENT */
+.about {
+    padding: 50px 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.about-content img {
+    width: 48%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-content {
+    width: 48%;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Reverse the order for alternating sections */
+.about-content.reverse {
+    flex-direction: row-reverse;
+}

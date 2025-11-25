@@ -1,0 +1,192 @@
+/* Account Settings Styling */
+.account-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2, h3 {
+    color: #18375d;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1f4c81;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 15%;
+    border: 2px solid #18375d;
+    object-fit: cover;
+}
+
+.form-group input[type="file"] {
+    border: none;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn, .delete-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #37a9e0, #18375d);
+    color: white;
+}
+
+.save-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c9302c;
+}
+
+/* Modal Styles */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ok-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ok-btn:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 350px;
+    margin: 15% auto;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-actions {
+    margin-top: 15px;
+}
+
+.delete-confirm-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.cancel-btn {
+    background: gray;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-confirm-btn:hover {
+    background: darkred;
+}
+
+.cancel-btn:hover {
+    background: darkgray;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .account-container {
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}
